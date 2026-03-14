@@ -1,10 +1,16 @@
 // Mock data for CanoCrystal Website
 
+// Premium Color Palette: Rose Gold + Charcoal + Cream
 export const brandColors = {
-  canoCrystal: '#4C8FFF',
-  canoBond: '#FF6A00',
-  blackberry: '#6B4DFF',
-  furniture: '#8A5A3B'
+  canoCrystal: '#B76E79', // Rose Gold
+  canoBond: '#C9A0A0', // Soft Rose
+  blackberry: '#8B7E8B', // Mauve
+  furniture: '#A68A7A', // Warm Taupe
+  primary: '#2C2C2C', // Charcoal
+  secondary: '#3A3A3A', // Medium Charcoal
+  accent: '#D4AF37', // Gold accent
+  cream: '#FAF9F6', // Premium Cream
+  lightCream: '#FFFEF7' // Light Cream
 };
 
 export const canoBondProducts = [

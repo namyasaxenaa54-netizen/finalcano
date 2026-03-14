@@ -30,22 +30,35 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gradient-to-b from-gray-50 to-gray-100 pt-20 pb-10">
-      <div className="max-w-7xl mx-auto px-6">
+    <footer className="bg-gradient-to-b from-[#FAF9F6] to-[#F5F5DC] pt-16 sm:pt-20 pb-10 relative overflow-hidden">
+      {/* Subtle tile texture */}
+      <div className="absolute inset-0 opacity-5">
+        <div 
+          style={{
+            backgroundImage: 'url(https://images.unsplash.com/photo-1558346648-9757f2fa4474)',
+            backgroundSize: '400px 400px',
+            backgroundRepeat: 'repeat'
+          }}
+          className="w-full h-full"
+        />
+      </div>
+      
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 sm:gap-12 mb-12 sm:mb-16">
           {/* Brand Section */}
           <div className="lg:col-span-2">
-            <div className="flex items-center space-x-2 mb-6">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center shadow-lg">
-                <div className="w-7 h-7 rounded-full bg-white/30" />
-              </div>
-              <span className="text-2xl font-bold text-gray-900">CanoCrystal</span>
+            <div className="mb-6">
+              <img 
+                src="https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/lrvcnut7_Screenshot%202026-03-14%20at%203.14.05%E2%80%AFPM.png"
+                alt="CanoCrystal"
+                className="h-12 sm:h-14 w-auto"
+              />
             </div>
-            <p className="text-gray-600 mb-6 leading-relaxed">
+            <p className="text-[#3A3A3A] mb-6 leading-relaxed text-sm sm:text-base">
               Engineering brands for modern living. Delivering excellence across construction chemicals and premium furniture solutions.
             </p>
-            <div className="flex items-center space-x-2 text-gray-600">
+            <div className="flex items-center space-x-2 text-[#3A3A3A]">
               <Mail size={18} />
               <span className="text-sm">info@canocrystal.com</span>
             </div>
@@ -53,13 +66,13 @@ const Footer = () => {
 
           {/* Brands */}
           <div>
-            <h4 className="font-bold text-gray-900 mb-4">Our Brands</h4>
+            <h4 className="font-bold text-[#2C2C2C] mb-4">Our Brands</h4>
             <ul className="space-y-3">
               {brandLinks.map((link) => (
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="text-gray-600 hover:text-blue-600 transition-colors duration-200"
+                    className="text-[#3A3A3A] hover:text-[#B76E79] transition-colors duration-200 text-sm sm:text-base"
                   >
                     {link.name}
                   </a>
@@ -70,13 +83,13 @@ const Footer = () => {
 
           {/* Products */}
           <div>
-            <h4 className="font-bold text-gray-900 mb-4">Products</h4>
+            <h4 className="font-bold text-[#2C2C2C] mb-4">Products</h4>
             <ul className="space-y-3">
               {productLinks.map((link) => (
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="text-gray-600 hover:text-blue-600 transition-colors duration-200"
+                    className="text-[#3A3A3A] hover:text-[#B76E79] transition-colors duration-200 text-sm sm:text-base"
                   >
                     {link.name}
                   </a>
@@ -87,13 +100,13 @@ const Footer = () => {
 
           {/* Company */}
           <div>
-            <h4 className="font-bold text-gray-900 mb-4">Company</h4>
+            <h4 className="font-bold text-[#2C2C2C] mb-4">Company</h4>
             <ul className="space-y-3">
               {companyLinks.map((link) => (
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="text-gray-600 hover:text-blue-600 transition-colors duration-200"
+                    className="text-[#3A3A3A] hover:text-[#B76E79] transition-colors duration-200 text-sm sm:text-base"
                   >
                     {link.name}
                   </a>
@@ -104,12 +117,12 @@ const Footer = () => {
         </div>
 
         {/* Divider */}
-        <div className="border-t border-gray-300 mb-8" />
+        <div className="border-t border-[#B76E79]/20 mb-8" />
 
         {/* Bottom Section */}
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           {/* Copyright */}
-          <div className="text-gray-600 text-sm text-center md:text-left">
+          <div className="text-[#3A3A3A] text-sm text-center md:text-left">
             © {new Date().getFullYear()} CanoCrystal Industries. All rights reserved.
           </div>
 
@@ -121,7 +134,7 @@ const Footer = () => {
                 <a
                   key={index}
                   href={social.href}
-                  className={`text-gray-600 transition-colors duration-200 ${social.color}`}
+                  className={`text-[#3A3A3A] transition-colors duration-200 ${social.color.replace('hover:text-blue-600', 'hover:text-[#B76E79]').replace('hover:text-blue-400', 'hover:text-[#C9A0A0]').replace('hover:text-pink-600', 'hover:text-[#8B7E8B]').replace('hover:text-blue-700', 'hover:text-[#A68A7A]')}`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -133,10 +146,10 @@ const Footer = () => {
 
           {/* Legal Links */}
           <div className="flex items-center space-x-6 text-sm">
-            <a href="#privacy" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
+            <a href="#privacy" className="text-[#3A3A3A] hover:text-[#B76E79] transition-colors duration-200">
               Privacy Policy
             </a>
-            <a href="#terms" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
+            <a href="#terms" className="text-[#3A3A3A] hover:text-[#B76E79] transition-colors duration-200">
               Terms of Service
             </a>
           </div>
@@ -144,10 +157,12 @@ const Footer = () => {
 
         {/* Powered by section */}
         <div className="mt-12 text-center">
-          <div className="inline-flex items-center justify-center space-x-2 text-gray-500 text-sm">
-            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-300 to-blue-500 flex items-center justify-center">
-              <div className="w-5 h-5 rounded-full bg-white/40" />
-            </div>
+          <div className="inline-flex items-center justify-center space-x-2 text-[#3A3A3A] text-sm">
+            <img 
+              src="https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/lrvcnut7_Screenshot%202026-03-14%20at%203.14.05%E2%80%AFPM.png"
+              alt="CanoCrystal"
+              className="h-6 w-auto"
+            />
             <span>Powered by CanoCrystal</span>
           </div>
         </div>

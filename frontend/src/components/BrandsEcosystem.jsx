@@ -7,60 +7,70 @@ const BrandsEcosystem = () => {
   const brands = [
     {
       ...brandInfo.canoBond,
-      gradient: 'from-orange-50 to-orange-100',
-      textColor: 'text-orange-600',
+      color: '#C9A0A0',
+      gradient: 'from-[#C9A0A0]/20 to-[#B76E79]/20',
+      borderColor: 'border-[#C9A0A0]/30',
+      textColor: 'text-[#2C2C2C]',
       image: 'https://images.unsplash.com/photo-1703868669362-562283170216?crop=entropy&cs=srgb&fm=jpg&q=85'
     },
     {
       ...brandInfo.blackberry,
-      gradient: 'from-purple-50 to-purple-100',
-      textColor: 'text-purple-600',
+      color: '#8B7E8B',
+      gradient: 'from-[#8B7E8B]/20 to-[#A68A7A]/20',
+      borderColor: 'border-[#8B7E8B]/30',
+      textColor: 'text-[#2C2C2C]',
       image: 'https://images.unsplash.com/photo-1598056036946-3cfa8493bfdf?crop=entropy&cs=srgb&fm=jpg&q=85'
     },
     {
       ...brandInfo.furniture,
-      gradient: 'from-amber-50 to-amber-100',
-      textColor: 'text-amber-700',
+      color: '#A68A7A',
+      gradient: 'from-[#A68A7A]/20 to-[#8B7E8B]/20',
+      borderColor: 'border-[#A68A7A]/30',
+      textColor: 'text-[#2C2C2C]',
       image: 'https://images.unsplash.com/photo-1724582586529-62622e50c0b3?crop=entropy&cs=srgb&fm=jpg&q=85'
     }
   ];
 
   return (
-    <section id="brands" className="py-24 bg-gradient-to-b from-gray-50 to-white">
-      <div className="max-w-7xl mx-auto px-6">
-        {/* Animation: Crystal splitting visualization */}
-        <div className="text-center mb-20">
-          <div className="flex items-center justify-center mb-8">
-            <div className="relative">
-              {/* Central crystal */}
-              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-300 to-blue-500 shadow-lg animate-pulse" />
-              
-              {/* Branching lines */}
-              <svg className="absolute top-8 left-8 w-64 h-32" viewBox="0 0 200 100">
-                <line x1="0" y1="0" x2="60" y2="40" stroke="#FF6A00" strokeWidth="2" className="animate-draw" />
-                <line x1="0" y1="0" x2="100" y2="10" stroke="#6B4DFF" strokeWidth="2" className="animate-draw" style={{ animationDelay: '0.2s' }} />
-                <line x1="0" y1="0" x2="80" y2="60" stroke="#8A5A3B" strokeWidth="2" className="animate-draw" style={{ animationDelay: '0.4s' }} />
-              </svg>
-            </div>
-          </div>
+    <section id="brands" className="py-16 sm:py-24 relative overflow-hidden">
+      {/* Marble texture background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#FAF9F6] via-white to-[#FFFEF7]">
+        <div 
+          className="absolute inset-0 opacity-8"
+          style={{
+            backgroundImage: 'url(https://images.unsplash.com/photo-1551554781-c46200ea959d)',
+            backgroundSize: '500px 500px',
+            backgroundRepeat: 'repeat'
+          }}
+        />
+      </div>
 
-          <h2 className="text-5xl font-bold text-gray-900 mb-4">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
+        {/* Header */}
+        <div className="text-center mb-12 sm:mb-20">
+          <div className="inline-block mb-4">
+            <span className="text-sm font-semibold text-[#B76E79] bg-[#B76E79]/10 px-4 py-2 rounded-full">
+              Our Ecosystem
+            </span>
+          </div>
+          
+          <h2 className="text-4xl sm:text-5xl font-bold text-[#2C2C2C] mb-4">
             One Crystal. Three Powerful Brands.
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-[#3A3A3A] max-w-2xl mx-auto">
             United by innovation, specialized for excellence across construction and living spaces
           </p>
         </div>
 
         {/* Brand Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
           {brands.map((brand, index) => (
             <div
               key={brand.name}
               className="group cursor-pointer"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className={`relative h-full bg-gradient-to-br ${brand.gradient} rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden`}>
+              <div className={`relative h-full bg-gradient-to-br ${brand.gradient} backdrop-blur-sm border-2 ${brand.borderColor} rounded-3xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 overflow-hidden`}>
                 {/* Background image with overlay */}
                 <div className="absolute inset-0 opacity-20">
                   <img
@@ -78,15 +88,15 @@ const BrandsEcosystem = () => {
                     style={{ backgroundColor: brand.color }}
                   />
 
-                  <h3 className={`text-3xl font-bold mb-3 ${brand.textColor}`}>
+                  <h3 className={`text-2xl sm:text-3xl font-bold mb-3 ${brand.textColor}`}>
                     {brand.name}
                   </h3>
                   
-                  <p className="text-lg font-semibold text-gray-700 mb-4">
+                  <p className="text-base sm:text-lg font-semibold text-[#3A3A3A] mb-4">
                     {brand.tagline}
                   </p>
                   
-                  <p className="text-gray-600 mb-6 leading-relaxed">
+                  <p className="text-[#3A3A3A] mb-6 leading-relaxed text-sm sm:text-base">
                     {brand.description}
                   </p>
 
@@ -109,22 +119,6 @@ const BrandsEcosystem = () => {
           ))}
         </div>
       </div>
-
-      <style jsx>{`
-        @keyframes draw {
-          from {
-            stroke-dasharray: 100;
-            stroke-dashoffset: 100;
-          }
-          to {
-            stroke-dasharray: 100;
-            stroke-dashoffset: 0;
-          }
-        }
-        .animate-draw {
-          animation: draw 1s ease-out forwards;
-        }
-      `}</style>
     </section>
   );
 };
