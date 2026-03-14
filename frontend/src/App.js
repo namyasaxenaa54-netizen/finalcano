@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
-import CinematicLoader from './components/Loader';
+import SleekLoader from './components/Loader';
 import Header from './components/Header';
 import LightThemeHero from './components/HeroSection';
 import ProductsShowcase from './components/ProductsShowcase';
@@ -49,7 +49,7 @@ function App() {
 
   return (
     <div className="App">
-      {loading && <CinematicLoader onComplete={handleLoadingComplete} />}
+      {loading && <SleekLoader onComplete={handleLoadingComplete} />}
       
       {!loading && (
         <>
