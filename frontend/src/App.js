@@ -1,15 +1,36 @@
 import React, { useState, useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import CinematicLoader from './components/Loader';
 import Header from './components/Header';
-import PremiumHeroSection from './components/HeroSection';
+import LightThemeHero from './components/HeroSection';
 import ProductsShowcase from './components/ProductsShowcase';
 import BrandsEcosystem from './components/BrandsEcosystem';
 import TechnologySection from './components/TechnologySection';
 import IndustriesSection from './components/IndustriesSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
+import CanoBondPage from './pages/CanoBondPage';
+import BlackberryPage from './pages/BlackberryPage';
+import FurniturePage from './pages/FurniturePage';
 import { Toaster } from './components/ui/sonner';
+
+function HomePage() {
+  return (
+    <>
+      <Header />
+      <main>
+        <LightThemeHero />
+        <ProductsShowcase />
+        <BrandsEcosystem />
+        <TechnologySection />
+        <IndustriesSection />
+        <ContactSection />
+      </main>
+      <Footer />
+    </>
+  );
+}
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -32,16 +53,12 @@ function App() {
       
       {!loading && (
         <>
-          <Header />
-          <main>
-            <PremiumHeroSection />
-            <ProductsShowcase />
-            <BrandsEcosystem />
-            <TechnologySection />
-            <IndustriesSection />
-            <ContactSection />
-          </main>
-          <Footer />
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/canobond" element={<CanoBondPage />} />
+            <Route path="/blackberry" element={<BlackberryPage />} />
+            <Route path="/furniture" element={<FurniturePage />} />
+          </Routes>
           <Toaster />
         </>
       )}
