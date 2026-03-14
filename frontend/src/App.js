@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import Loader from './components/Loader';
+import PremiumLoader from './components/Loader';
 import Header from './components/Header';
-import HeroSection from './components/HeroSection';
+import UniqueHeroSection from './components/HeroSection';
 import ProductsShowcase from './components/ProductsShowcase';
 import BrandsEcosystem from './components/BrandsEcosystem';
 import TechnologySection from './components/TechnologySection';
@@ -28,13 +28,13 @@ function App() {
 
   return (
     <div className="App">
-      {loading && <Loader onComplete={handleLoadingComplete} />}
+      {loading && <PremiumLoader onComplete={handleLoadingComplete} />}
       
       {!loading && (
         <>
           <Header />
           <main>
-            <HeroSection />
+            <UniqueHeroSection />
             <ProductsShowcase />
             <BrandsEcosystem />
             <TechnologySection />
