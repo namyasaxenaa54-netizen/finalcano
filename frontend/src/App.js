@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import CinematicLoader from './components/Loader';
 import Header from './components/Header';
-import LuxuryBrandSelector from './components/HeroSection';
+import PremiumHeroSection from './components/HeroSection';
 import ProductsShowcase from './components/ProductsShowcase';
 import BrandsEcosystem from './components/BrandsEcosystem';
 import TechnologySection from './components/TechnologySection';
@@ -34,7 +34,7 @@ function App() {
         <>
           <Header />
           <main>
-            <LuxuryBrandSelector />
+            <PremiumHeroSection />
             <ProductsShowcase />
             <BrandsEcosystem />
             <TechnologySection />
