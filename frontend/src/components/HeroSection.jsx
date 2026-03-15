@@ -48,7 +48,7 @@ const LightThemeHero = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-20">
         {/* Hero Header */}
-        <div className="text-center mb-20 pt-20">
+        <div className="text-center mb-20 pt-32">
           {/* Logo */}
           <div className="mb-12 animate-fade-in">
             <img 
@@ -67,19 +67,31 @@ const LightThemeHero = () => {
             Explore our premium brands - from construction chemicals to luxury furniture
           </p>
 
-          {/* Trust badges */}
+          {/* Certifications Trust badges */}
+          <div className="flex flex-wrap justify-center gap-3 mb-4 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+            {[
+              'ISO 9001:2015',
+              'ISO 14001:2018', 
+              'ISI Certified',
+              'TÜV SUD',
+              'CE Marking',
+              'German Quality'
+            ].map((cert, i) => (
+              <div key={i} className="px-4 py-2 bg-white rounded-full shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+                <span className="text-xs font-semibold text-gray-700">{cert}</span>
+              </div>
+            ))}
+          </div>
+
+          {/* Additional info */}
           <div className="flex flex-wrap justify-center gap-4 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-            <div className="flex items-center space-x-2 px-4 py-2 bg-white rounded-full shadow-sm border border-gray-200">
+            <div className="flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-[#E67E22]/10 to-[#8E44AD]/10 rounded-full">
               <Sparkles size={16} className="text-[#E67E22]" />
-              <span className="text-sm font-semibold text-gray-700">ISO 9001:2015</span>
+              <span className="text-sm font-semibold text-gray-700">10+ Manufacturing Plants</span>
             </div>
-            <div className="flex items-center space-x-2 px-4 py-2 bg-white rounded-full shadow-sm border border-gray-200">
+            <div className="flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-[#8E44AD]/10 to-[#7D6608]/10 rounded-full">
               <Sparkles size={16} className="text-[#8E44AD]" />
-              <span className="text-sm font-semibold text-gray-700">15+ Years</span>
-            </div>
-            <div className="flex items-center space-x-2 px-4 py-2 bg-white rounded-full shadow-sm border border-gray-200">
-              <Sparkles size={16} className="text-[#7D6608]" />
-              <span className="text-sm font-semibold text-gray-700">Premium Quality</span>
+              <span className="text-sm font-semibold text-gray-700">300+ Trained Personnel</span>
             </div>
           </div>
         </div>
