@@ -144,11 +144,13 @@ const BrandPageTemplate = ({ brandData }) => {
         {/* Brand Banner Image */}
         {bannerImage && (
           <div className="mb-12 md:mb-16 rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl bg-gray-50">
-            <img 
-              src={bannerImage}
-              alt={`${name} Products`}
-              className="w-full max-h-[250px] sm:max-h-[350px] md:max-h-[400px] lg:max-h-[500px] object-contain"
-            />
+            <div className="w-full aspect-[16/9] sm:aspect-[21/9] md:aspect-[24/9]">
+              <img 
+                src={bannerImage}
+                alt={`${name} Products`}
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
         )}
 
