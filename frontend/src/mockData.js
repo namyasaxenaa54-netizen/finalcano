@@ -302,16 +302,11 @@ export const blackberryBrandData = {
           },
           features: ['Decorative finish', 'Easy to mix', 'Long-lasting sparkle', 'Premium aesthetic'],
           applications: ['Feature walls', 'Bathroom accents', 'Kitchen backsplash', 'Decorative floors']
-        }
-      ]
-    },
-    cleaning: {
-      title: 'Cleaning Solutions',
-      products: [
+        },
         {
           id: 'bb-tilecleaner',
           name: 'Tile Cleaner',
-          section: 'cleaning',
+          section: 'grouts',
           description: 'Professional tile cleaner that removes tough stains - Heavy duty formula',
           image: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/fpgffh2i_Screenshot%202026-03-16%20at%203.57.48%E2%80%AFPM.png',
           specs: {
@@ -324,11 +319,15 @@ export const blackberryBrandData = {
           applications: ['Post-installation cleaning', 'Maintenance', 'Stain removal', 'Grout cleaning']
         }
       ]
+    },
+    cleaning: {
+      title: 'Cleaning Solutions',
+      products: []
     }
   }
 };
 
-// CANOBOND BRAND PRODUCTS - Using existing real data
+// CANOBOND BRAND PRODUCTS - Using existing real data with individual images
 export const canoBondBrandData = {
   name: 'CanoBond',
   tagline: 'German Intelligence. Unshakeable Bond.',
@@ -338,15 +337,42 @@ export const canoBondBrandData = {
   sections: {
     adhesives: {
       title: 'Tile Adhesives',
-      products: realCanoBondProducts.slice(0, 5)
+      products: [
+        {
+          ...realCanoBondProducts[0],
+          image: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/jeehwvnl_image.png'
+        },
+        {
+          ...realCanoBondProducts[4],
+          image: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/gygsnn8f_image.png'
+        },
+        {
+          ...realCanoBondProducts[3],
+          image: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/azx7fpft_image.png'
+        },
+        {
+          ...realCanoBondProducts[1],
+          image: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/pqu66w3b_image.png'
+        },
+        {
+          ...realCanoBondProducts[2],
+          image: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/f4octibf_image.png'
+        }
+      ]
     },
     grouts: {
       title: 'Grouts & Solutions',
-      products: [realCanoBondProducts[5]]
+      products: [
+        realCanoBondProducts[5],
+        {
+          ...groutProducts.find(p => p.id === 'tilecleaner'),
+          image: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/fpgffh2i_Screenshot%202026-03-16%20at%203.57.48%E2%80%AFPM.png'
+        }
+      ]
     },
     cleaning: {
       title: 'Cleaning Solutions',
-      products: groutProducts.filter(p => p.id === 'tilecleaner')
+      products: []
     }
   }
 };
