@@ -155,7 +155,7 @@ const BrandPageTemplate = ({ brandData }) => {
 
         {/* Brand Banner Image */}
         {bannerImage && (
-          <div className="mb-12 md:mb-16 rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl bg-white">
+          <div className="mb-12 md:mb-16 rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl bg-white mx-auto" style={{ maxWidth: '1200px' }}>
             <img 
               src={bannerImage}
               alt={`${name} Products`}

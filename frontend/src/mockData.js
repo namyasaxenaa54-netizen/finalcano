@@ -333,7 +333,7 @@ export const canoBondBrandData = {
   tagline: 'German Intelligence. Unshakeable Bond.',
   brandColor: '#E67E22',
   lightColor: '#FFF5EE',
-  bannerImage: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/glvjtdnf_mockups.png',
+  bannerImage: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/t1pe2odd_Screenshot%202026-03-16%20at%208.27.06%E2%80%AFPM.png',
   sections: {
     adhesives: {
       title: 'Tile Adhesives',
