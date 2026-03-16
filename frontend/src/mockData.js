@@ -161,7 +161,197 @@ export const brandMessages = {
   blackberry: 'Premium Solutions for Perfect Finishes'
 };
 
-// Legacy exports for compatibility (mapped from real products)
+// BLACKBERRY BRAND PRODUCTS - Real Product Data
+export const blackberryBrandData = {
+  name: 'Blackberry',
+  tagline: 'Premium Solutions for Perfect Finishes',
+  brandColor: '#8E44AD',
+  lightColor: '#F4ECF7',
+  bannerImage: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/7d6mkjxi_Screenshot%202026-03-16%20at%203.59.46%E2%80%AFPM.png',
+  sections: {
+    adhesives: {
+      title: 'Tile Adhesives',
+      products: [
+        {
+          id: 'bb-ct333',
+          code: 'CT-333',
+          name: 'Polymer Grey Tile Adhesive',
+          section: 'adhesives',
+          description: 'Polymer-based grey tile adhesive for ceramic tiles and small format natural stone',
+          image: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/7d6mkjxi_Screenshot%202026-03-16%20at%203.59.46%E2%80%AFPM.png',
+          specs: {
+            standard: 'C1T as per EN / TYPE 1 as per IS',
+            thickness: 'Up to 15mm',
+            weight: '20 KG',
+            coverage: '1.2kg/m²/mm'
+          },
+          features: ['Water retention', 'Easy mixing', 'Indoor/Outdoor', 'Vertical & Horizontal'],
+          applications: ['Ceramic tiles', 'Terracotta', 'Clay tiles', 'Natural stone']
+        },
+        {
+          id: 'bb-cvt444',
+          code: 'CVT-444',
+          name: 'Anti-Skid Grey Adhesive',
+          section: 'adhesives',
+          description: 'Advanced polymer enriched anti-skid adhesive for ceramic and natural stones',
+          image: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/7d6mkjxi_Screenshot%202026-03-16%20at%203.59.46%E2%80%AFPM.png',
+          specs: {
+            standard: 'C2T as per EN / TYPE 2 as per IS',
+            thickness: 'Up to 10mm',
+            weight: '20 KG',
+            colors: 'Grey & White'
+          },
+          features: ['Anti-skid', 'Perfect adherence', 'Extended open time', 'Top-to-bottom install'],
+          applications: ['Ceramic tiles', 'Natural stone', 'Interior walls', 'Floor applications']
+        },
+        {
+          id: 'bb-iwt666',
+          code: 'IWT-666',
+          name: 'Thin Set Premium Adhesive',
+          section: 'adhesives',
+          description: 'High polymer-modified thin set adhesive for vitrified tiles in wet conditions',
+          image: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/7d6mkjxi_Screenshot%202026-03-16%20at%203.59.46%E2%80%AFPM.png',
+          specs: {
+            standard: 'C2TE as per EN / TYPE 3 as per IS',
+            thickness: 'Up to 12mm',
+            weight: '20 KG',
+            colors: 'Grey & White'
+          },
+          features: ['Water resistant', 'Longer open time', 'Tile-on-tile', 'Pool safe'],
+          applications: ['Swimming pools', 'Bathrooms', 'Water bodies', 'Wet rooms']
+        },
+        {
+          id: 'bb-vt777',
+          code: 'VT-777',
+          name: 'High Performance Vitrified Adhesive',
+          section: 'adhesives',
+          description: 'High-performance polymer-modified adhesive for vitrified and low-porosity tiles',
+          image: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/7d6mkjxi_Screenshot%202026-03-16%20at%203.59.46%E2%80%AFPM.png',
+          specs: {
+            standard: 'C2TE as per EN / TYPE 3 as per IS',
+            thickness: 'Up to 15mm',
+            weight: '20 KG',
+            coverage: '1.2kg/m²/mm',
+            colors: 'Grey & White'
+          },
+          features: ['Visible fibres', 'Exceptional bond', 'Water resistant', 'Flexible'],
+          applications: ['Vitrified tiles', 'Glass mosaic', 'Natural stone', 'Swimming pools']
+        },
+        {
+          id: 'bb-ewt888',
+          code: 'EWT-888',
+          name: 'Ultra Flexible Large Format Adhesive',
+          section: 'adhesives',
+          description: 'Highly flexible adhesive for large format tiles with enhanced slip resistance',
+          image: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/7d6mkjxi_Screenshot%202026-03-16%20at%203.59.46%E2%80%AFPM.png',
+          specs: {
+            standard: 'C2T E S2 as per EN / TYPE 4 T S2 as per IS',
+            thickness: 'Up to 15mm',
+            weight: '20 KG',
+            colors: 'Grey & White'
+          },
+          features: ['High polymer', 'Slip resistant', 'Large format', 'Extreme flexibility'],
+          applications: ['Large tiles >1200mm', 'Granite', 'High deformation areas', 'External facade']
+        }
+      ]
+    },
+    grouts: {
+      title: 'Grouts & Solutions',
+      products: [
+        {
+          id: 'bb-epoxygrout',
+          name: 'Epoxy Grout',
+          section: 'grouts',
+          description: 'Three component chemical resistant epoxy grout - stain free and durable',
+          image: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/ezw90l00_Screenshot%202026-03-16%20at%203.59.17%E2%80%AFPM.png',
+          specs: {
+            packaging: '1KG & 5KG',
+            colors: '24 colors available',
+            standard: 'RG as per EN13888 / ISO 13007',
+            shelfLife: '24 months'
+          },
+          features: ['Stain free', 'Chemical resistant', 'Weather resistant', 'Non-toxic'],
+          applications: ['Hospitals', 'Kitchens', 'Swimming pools', 'High traffic areas']
+        },
+        {
+          id: 'bb-tilegrout',
+          name: 'Tile Grout',
+          section: 'grouts',
+          description: 'Polymer-based sanded cement grout for wall/floor tiles & natural stone - Easy & quick to use',
+          image: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/3vsbxhjh_Screenshot%202026-03-16%20at%203.58.27%E2%80%AFPM.png',
+          specs: {
+            weight: '500GM',
+            colors: '24 colors',
+            shelfLife: '12 months',
+            usage: 'Ceramic, Vitrified & Mosaic Tile'
+          },
+          features: ['Reduced water absorption', 'Abrasion resistant', 'Non-cracking', 'Weather resistant'],
+          applications: ['Wall tiles', 'Floor tiles', 'Natural stone', 'Ceramic tiles']
+        },
+        {
+          id: 'bb-epoxyglitter',
+          name: 'Epoxy Grout Glitter',
+          section: 'grouts',
+          description: 'Decorative glitter additive for epoxy grout - adds sparkling aesthetic finish',
+          image: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/fxwbqjcw_Screenshot%202026-03-16%20at%203.58.11%E2%80%AFPM.png',
+          specs: {
+            weight: '100g',
+            netWeight: '1L',
+            colors: 'Multiple colors',
+            usage: 'Mix with epoxy grout'
+          },
+          features: ['Decorative finish', 'Easy to mix', 'Long-lasting sparkle', 'Premium aesthetic'],
+          applications: ['Feature walls', 'Bathroom accents', 'Kitchen backsplash', 'Decorative floors']
+        }
+      ]
+    },
+    cleaning: {
+      title: 'Cleaning Solutions',
+      products: [
+        {
+          id: 'bb-tilecleaner',
+          name: 'Tile Cleaner',
+          section: 'cleaning',
+          description: 'Professional tile cleaner that removes tough stains - Heavy duty formula',
+          image: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/fpgffh2i_Screenshot%202026-03-16%20at%203.57.48%E2%80%AFPM.png',
+          specs: {
+            packaging: '1 Litre',
+            shelfLife: '24 months',
+            type: 'Heavy duty',
+            pH: 'Acidic formula'
+          },
+          features: ['Fast acting', 'Removes cement film', 'Removes efflorescence', 'Professional grade'],
+          applications: ['Post-installation cleaning', 'Maintenance', 'Stain removal', 'Grout cleaning']
+        }
+      ]
+    }
+  }
+};
+
+// CANOBOND BRAND PRODUCTS - Using existing real data
+export const canoBondBrandData = {
+  name: 'CanoBond',
+  tagline: 'German Intelligence. Unshakeable Bond.',
+  brandColor: '#E67E22',
+  lightColor: '#FFF5EE',
+  bannerImage: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/189kmljp_image.png',
+  sections: {
+    adhesives: {
+      title: 'Tile Adhesives',
+      products: realCanoBondProducts.slice(0, 5)
+    },
+    grouts: {
+      title: 'Grouts & Solutions',
+      products: [realCanoBondProducts[5]]
+    },
+    cleaning: {
+      title: 'Cleaning Solutions',
+      products: groutProducts.filter(p => p.id === 'tilecleaner')
+    }
+  }
+};
+
+// Legacy exports for compatibility
 export const canoBondProducts = realCanoBondProducts.slice(0, 4);
 export const blackberryProducts = [
   {
