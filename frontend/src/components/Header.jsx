@@ -38,7 +38,7 @@ const Header = () => {
             </a>
           </div>
           <div className="text-xs">
-            <span className="hidden md:inline">Manufacturing: CANO0 DRYMIX Alwar (Rajasthan) | </span>
+            <span className="hidden md:inline">Manufacturing: CANO DRYMIX Alwar (Rajasthan) | </span>
             <span className="font-semibold">ISO 9001:2015 Certified</span>
           </div>
         </div>
