@@ -178,7 +178,7 @@ export const blackberryBrandData = {
           name: 'Polymer Grey Tile Adhesive',
           section: 'adhesives',
           description: 'Polymer-based grey tile adhesive for ceramic tiles and small format natural stone',
-          image: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/7d6mkjxi_Screenshot%202026-03-16%20at%203.59.46%E2%80%AFPM.png',
+          image: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/oyw8un96_Screenshot%202026-03-16%20at%204.43.01%E2%80%AFPM.png',
           specs: {
             standard: 'C1T as per EN / TYPE 1 as per IS',
             thickness: 'Up to 15mm',
@@ -194,7 +194,7 @@ export const blackberryBrandData = {
           name: 'Anti-Skid Grey Adhesive',
           section: 'adhesives',
           description: 'Advanced polymer enriched anti-skid adhesive for ceramic and natural stones',
-          image: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/7d6mkjxi_Screenshot%202026-03-16%20at%203.59.46%E2%80%AFPM.png',
+          image: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/w76owp3h_Screenshot%202026-03-16%20at%204.43.17%E2%80%AFPM.png',
           specs: {
             standard: 'C2T as per EN / TYPE 2 as per IS',
             thickness: 'Up to 10mm',
@@ -210,7 +210,7 @@ export const blackberryBrandData = {
           name: 'Thin Set Premium Adhesive',
           section: 'adhesives',
           description: 'High polymer-modified thin set adhesive for vitrified tiles in wet conditions',
-          image: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/7d6mkjxi_Screenshot%202026-03-16%20at%203.59.46%E2%80%AFPM.png',
+          image: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/n6hisdtg_Screenshot%202026-03-16%20at%204.43.32%E2%80%AFPM.png',
           specs: {
             standard: 'C2TE as per EN / TYPE 3 as per IS',
             thickness: 'Up to 12mm',
@@ -226,7 +226,7 @@ export const blackberryBrandData = {
           name: 'High Performance Vitrified Adhesive',
           section: 'adhesives',
           description: 'High-performance polymer-modified adhesive for vitrified and low-porosity tiles',
-          image: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/7d6mkjxi_Screenshot%202026-03-16%20at%203.59.46%E2%80%AFPM.png',
+          image: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/uswmrksn_Screenshot%202026-03-16%20at%204.43.50%E2%80%AFPM.png',
           specs: {
             standard: 'C2TE as per EN / TYPE 3 as per IS',
             thickness: 'Up to 15mm',
@@ -243,7 +243,7 @@ export const blackberryBrandData = {
           name: 'Ultra Flexible Large Format Adhesive',
           section: 'adhesives',
           description: 'Highly flexible adhesive for large format tiles with enhanced slip resistance',
-          image: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/7d6mkjxi_Screenshot%202026-03-16%20at%203.59.46%E2%80%AFPM.png',
+          image: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/qub1sm7d_Screenshot%202026-03-16%20at%204.44.05%E2%80%AFPM.png',
           specs: {
             standard: 'C2T E S2 as per EN / TYPE 4 T S2 as per IS',
             thickness: 'Up to 15mm',

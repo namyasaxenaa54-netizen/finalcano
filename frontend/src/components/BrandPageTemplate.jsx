@@ -19,11 +19,11 @@ const BrandPageTemplate = ({ brandData }) => {
 
   const ProductCard = ({ product }) => (
     <div className="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
-      <div className="relative h-80">
+      <div className="relative h-80 bg-gray-50">
         <img 
           src={product.image}
           alt={product.name}
-          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+          className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-700"
         />
         {product.code && (
           <div 
@@ -105,11 +105,11 @@ const BrandPageTemplate = ({ brandData }) => {
 
         {/* Brand Banner Image */}
         {bannerImage && (
-          <div className="mb-16 rounded-3xl overflow-hidden shadow-2xl">
+          <div className="mb-16 rounded-3xl overflow-hidden shadow-2xl bg-gray-50">
             <img 
               src={bannerImage}
               alt={`${name} Products`}
-              className="w-full h-auto object-cover"
+              className="w-full h-auto object-contain"
             />
           </div>
         )}
