@@ -13,12 +13,24 @@ const BrandPageTemplate = ({ brandData }) => {
   const navigate = useNavigate();
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const heroRef = useRef(null);
   const productsRef = useRef(null);
 
   const { name, tagline, brandColor, lightColor, bannerImage, sections } = brandData;
 
   useEffect(() => {
+    // Simulate loading completion
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    if (isLoading) return;
+
     // Hero animation
     gsap.from(heroRef.current, {
       opacity: 0,
@@ -47,7 +59,7 @@ const BrandPageTemplate = ({ brandData }) => {
     return () => {
       ScrollTrigger.getAll().forEach(trigger => trigger.kill());
     };
-  }, []);
+  }, [isLoading]);
 
   const handleViewDetails = (product) => {
     setSelectedProduct(product);
