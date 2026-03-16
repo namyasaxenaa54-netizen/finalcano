@@ -13,6 +13,9 @@ import Footer from './components/Footer';
 import CanoBondPage from './pages/CanoBondPage';
 import BlackberryPage from './pages/BlackberryPage';
 import FurniturePage from './pages/FurniturePage';
+import AboutPage from './pages/AboutPage';
+import ContactPage from './pages/ContactPage';
+import DistributorsPage from './pages/DistributorsPage';
 import { Toaster } from './components/ui/sonner';
 
 function HomePage() {
@@ -58,6 +61,9 @@ function App() {
             <Route path="/canobond" element={<CanoBondPage />} />
             <Route path="/blackberry" element={<BlackberryPage />} />
             <Route path="/furniture" element={<FurniturePage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/distributors" element={<DistributorsPage />} />
           </Routes>
           <Toaster />
         </>

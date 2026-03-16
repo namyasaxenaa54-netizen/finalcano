@@ -333,7 +333,7 @@ export const canoBondBrandData = {
   tagline: 'German Intelligence. Unshakeable Bond.',
   brandColor: '#E67E22',
   lightColor: '#FFF5EE',
-  bannerImage: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/189kmljp_image.png',
+  bannerImage: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/glvjtdnf_mockups.png',
   sections: {
     adhesives: {
       title: 'Tile Adhesives',
@@ -363,10 +363,33 @@ export const canoBondBrandData = {
     grouts: {
       title: 'Grouts & Solutions',
       products: [
-        realCanoBondProducts[5],
         {
-          ...groutProducts.find(p => p.id === 'tilecleaner'),
-          image: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/fpgffh2i_Screenshot%202026-03-16%20at%203.57.48%E2%80%AFPM.png'
+          ...realCanoBondProducts[5],
+          image: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/6dysg2u0_Screenshot%202026-03-14%20at%204.03.57%E2%80%AFPM.png'
+        },
+        {
+          id: 'cb-tilegrout',
+          name: 'Tile Grout',
+          description: 'Polymer-based sanded cement grout for wall/floor tiles & natural stone - Easy & quick to use',
+          image: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/8p19sbhd_Screenshot%202026-03-14%20at%204.04.24%E2%80%AFPM.png',
+          specs: { weight: '1KG', colors: '24 colors', shelfLife: '12 months' },
+          features: ['Reduced water absorption', 'Abrasion resistant', 'Non-cracking', 'Weather resistant']
+        },
+        {
+          id: 'cb-grouthardener',
+          name: 'Grout Hardener',
+          description: 'Synthetic polymer emulsion additive for cement grouts',
+          image: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/igqtqcub_Screenshot%202026-03-14%20at%204.03.30%E2%80%AFPM.png',
+          specs: { packaging: '300ml bottle', pH: '>8' },
+          features: ['Improves adhesion', 'Increases flexibility', 'Reduces permeability']
+        },
+        {
+          id: 'cb-tilecleaner',
+          name: 'Tile Cleaner',
+          description: 'Heavy duty hydrochloric-based cleaner for tile maintenance',
+          image: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/bw3m8ldj_Screenshot%202026-03-12%20at%207.24.11%E2%80%AFPM.png',
+          specs: { packaging: '1 Litre', shelfLife: '24 months' },
+          features: ['Fast acting', 'Removes cement film', 'Removes efflorescence']
         }
       ]
     },
