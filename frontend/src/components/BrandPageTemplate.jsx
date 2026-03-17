@@ -20,10 +20,10 @@ const BrandPageTemplate = ({ brandData }) => {
   const { name, tagline, brandColor, lightColor, bannerImage, sections } = brandData;
 
   useEffect(() => {
-    // Simulate loading completion
+    // Minimal loading delay for instant appearance
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 100);
+    }, 50);
 
     return () => clearTimeout(timer);
   }, []);
@@ -31,28 +31,28 @@ const BrandPageTemplate = ({ brandData }) => {
   useEffect(() => {
     if (isLoading) return;
 
-    // Hero animation
+    // Fast hero animation - reduced duration
     gsap.from(heroRef.current, {
       opacity: 0,
-      y: 50,
-      duration: 1,
-      ease: 'power3.out'
+      y: 30,
+      duration: 0.5,
+      ease: 'power2.out'
     });
 
-    // Animate product cards on scroll
+    // Much faster product card animations
     const productCards = document.querySelectorAll('.product-card');
     productCards.forEach((card, index) => {
       gsap.from(card, {
         scrollTrigger: {
           trigger: card,
-          start: 'top 85%',
+          start: 'top 90%',
           toggleActions: 'play none none none'
         },
         opacity: 0,
-        y: 50,
-        duration: 0.6,
-        delay: index * 0.1,
-        ease: 'power2.out'
+        y: 30,
+        duration: 0.4,
+        delay: index * 0.05,
+        ease: 'power1.out'
       });
     });
 
