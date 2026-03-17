@@ -96,7 +96,7 @@ const LightThemeHero = () => {
           </div>
         </div>
 
-        {/* THREE BRAND CARDS */}
+        {/* THREE BRAND CARDS - NEW PREMIUM DESIGN */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 mb-20">
           {brands.map((brand, index) => (
             <div
@@ -105,115 +105,108 @@ const LightThemeHero = () => {
               className="group cursor-pointer animate-fade-in-up"
               style={{ animationDelay: `${0.6 + index * 0.2}s` }}
             >
-              {/* Card Container */}
-              <div className="relative h-[500px] rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-4">
-                {/* Background Image */}
+              {/* Card Container - Premium Design */}
+              <div className="relative h-[580px] rounded-3xl overflow-hidden bg-white shadow-2xl hover:shadow-3xl transition-all duration-500 hover:-translate-y-6 border-2 border-gray-100">
+                {/* Background Image with Better Overlay */}
                 <div className="absolute inset-0">
                   <img 
                     src={brand.image}
                     alt={brand.name}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    className="w-full h-full object-cover opacity-30 group-hover:opacity-40 transition-all duration-700 group-hover:scale-105"
                   />
                   <div 
-                    className="absolute inset-0 opacity-90 group-hover:opacity-80 transition-opacity duration-500"
-                    style={{ background: `linear-gradient(135deg, ${brand.color}95, ${brand.color}dd)` }}
+                    className="absolute inset-0"
+                    style={{ background: `linear-gradient(135deg, ${brand.lightColor} 0%, white 100%)` }}
                   />
                 </div>
 
                 {/* Content */}
-                <div className="relative h-full flex flex-col justify-between p-8">
-                  {/* Top: Logo Badge */}
-                  <div className="flex justify-between items-start">
+                <div className="relative h-full flex flex-col justify-between p-10">
+                  {/* Top: Large Logo */}
+                  <div className="flex flex-col items-center text-center">
                     {brand.logo ? (
                       <div 
-                        className="w-20 h-20 rounded-2xl flex items-center justify-center shadow-lg p-3"
-                        style={{ backgroundColor: 'white' }}
+                        className="w-44 h-44 rounded-3xl flex items-center justify-center shadow-2xl p-8 mb-6 bg-white group-hover:scale-105 transition-transform duration-500 backdrop-blur-sm"
+                        style={{ 
+                          border: `4px solid ${brand.color}`,
+                          boxShadow: `0 15px 50px ${brand.color}50`
+                        }}
                       >
                         <img 
                           src={brand.logo} 
                           alt={`${brand.name} logo`}
-                          className="w-full h-full object-contain"
+                          className="w-full h-full object-contain filter drop-shadow-lg"
                         />
                       </div>
                     ) : (
                       <div 
-                        className="w-16 h-16 rounded-2xl flex items-center justify-center text-3xl shadow-lg"
-                        style={{ backgroundColor: brand.lightColor }}
+                        className="w-36 h-36 rounded-3xl flex items-center justify-center text-7xl shadow-2xl mb-6 bg-white group-hover:scale-105 transition-transform duration-500"
+                        style={{ 
+                          border: `4px solid ${brand.color}`,
+                          boxShadow: `0 15px 50px ${brand.color}50`
+                        }}
                       >
                         {brand.icon}
                       </div>
                     )}
-                    <div className="px-4 py-2 rounded-full bg-white/20 backdrop-blur-md border border-white/30">
-                      <span className="text-white text-xs font-semibold">{brand.tagline}</span>
+                    
+                    {/* Brand Tag */}
+                    <div 
+                      className="px-6 py-2.5 rounded-full shadow-lg mb-4"
+                      style={{ 
+                        backgroundColor: `${brand.color}20`, 
+                        border: `2px solid ${brand.color}40` 
+                      }}
+                    >
+                      <span className="font-bold text-sm tracking-wide" style={{ color: brand.color }}>
+                        {brand.tagline}
+                      </span>
                     </div>
                   </div>
 
                   {/* Bottom: Brand Info */}
-                  <div>
-                    <h2 className="text-4xl md:text-5xl font-bold text-white mb-3">
+                  <div className="text-center">
+                    <h2 
+                      className="text-5xl md:text-6xl font-bold mb-4 drop-shadow-sm"
+                      style={{ color: brand.color }}
+                    >
                       {brand.name}
                     </h2>
-                    <p className="text-white/90 text-lg mb-6">
+                    <p className="text-gray-700 text-xl font-semibold mb-8">
                       {brand.subtitle}
                     </p>
 
-                    {/* Click indicator */}
-                    <div className="flex items-center space-x-2 text-white group-hover:translate-x-2 transition-transform duration-300">
-                      <span className="font-semibold">Explore Products</span>
-                      <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+                    {/* CTA Button */}
+                    <div 
+                      className="inline-flex items-center space-x-3 px-10 py-5 rounded-full shadow-xl group-hover:shadow-2xl transition-all duration-300 group-hover:translate-y-[-4px]"
+                      style={{ 
+                        backgroundColor: brand.color,
+                        boxShadow: `0 8px 30px ${brand.color}70`
+                      }}
+                    >
+                      <span className="font-bold text-white text-lg tracking-wide">Explore Products</span>
+                      <ArrowRight size={24} className="text-white group-hover:translate-x-2 transition-transform" />
                     </div>
                   </div>
                 </div>
 
-                {/* Hover shine effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
-
-                {/* Decorative corner */}
+                {/* Animated Decorative Elements */}
                 <div 
-                  className="absolute top-0 right-0 w-32 h-32 opacity-20"
-                  style={{
-                    background: `radial-gradient(circle at top right, ${brand.lightColor}, transparent)`,
-                    borderRadius: '0 24px 0 100%'
-                  }}
+                  className="absolute -top-20 -right-20 w-52 h-52 rounded-full opacity-10 group-hover:scale-150 group-hover:opacity-20 transition-all duration-1000"
+                  style={{ backgroundColor: brand.color }}
                 />
+                <div 
+                  className="absolute -bottom-20 -left-20 w-52 h-52 rounded-full opacity-10 group-hover:scale-150 group-hover:opacity-20 transition-all duration-1000"
+                  style={{ backgroundColor: brand.color }}
+                />
+                
+                {/* Shine Effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
               </div>
             </div>
           ))}
         </div>
-
-        {/* Bottom CTA */}
-        <div className="text-center">
-          <p className="text-gray-500 text-sm mb-4">Click any brand to explore our complete product range</p>
-          <div className="w-16 h-1 bg-gradient-to-r from-[#E67E22] via-[#8E44AD] to-[#7D6608] rounded-full mx-auto" />
-        </div>
       </div>
-
-      <style jsx>{`
-        @keyframes fade-in {
-          from { opacity: 0; }
-          to { opacity: 1; }
-        }
-        
-        @keyframes fade-in-up {
-          from { 
-            opacity: 0; 
-            transform: translateY(30px); 
-          }
-          to { 
-            opacity: 1; 
-            transform: translateY(0); 
-          }
-        }
-        
-        .animate-fade-in {
-          animation: fade-in 1s ease-out forwards;
-        }
-        
-        .animate-fade-in-up {
-          animation: fade-in-up 1s ease-out forwards;
-          opacity: 0;
-        }
-      `}</style>
     </section>
   );
 };
