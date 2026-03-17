@@ -403,28 +403,52 @@ export const canoBondBrandData = {
 };
 
 // Legacy exports for compatibility
-export const canoBondProducts = realCanoBondProducts.slice(0, 4);
+export const canoBondProducts = [
+  {
+    ...realCanoBondProducts[0], // CT-333
+    image: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/jeehwvnl_image.png'
+  },
+  {
+    ...realCanoBondProducts[1], // VT-777
+    image: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/pqu66w3b_image.png'
+  },
+  {
+    ...realCanoBondProducts[2], // EWT-888
+    image: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/f4octibf_image.png'
+  },
+  {
+    ...realCanoBondProducts[3], // IWT-666
+    image: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/azx7fpft_image.png'
+  }
+];
 export const blackberryProducts = [
   {
-    id: 'bb1',
-    name: 'Premium Adhesive',
-    description: 'Specialized adhesive for professional applications',
-    image: 'https://images.unsplash.com/photo-1701422052265-64f0ac28dcd6?crop=entropy&cs=srgb&fm=jpg&q=85',
-    features: ['Professional grade', 'Multi-surface', 'Fast curing']
+    id: 'bb-ct333',
+    name: 'Polymer Grey Tile Adhesive',
+    description: 'Polymer-based grey tile adhesive for ceramic tiles',
+    image: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/oyw8un96_Screenshot%202026-03-16%20at%204.43.01%E2%80%AFPM.png',
+    features: ['Water retention', 'Easy mixing', 'Indoor/Outdoor']
   },
   {
-    id: 'bb2',
-    name: 'Designer Grout',
-    description: 'Premium colored grout for aesthetic finishes',
-    image: 'https://images.unsplash.com/photo-1629608564457-5d74829a9e14?crop=entropy&cs=srgb&fm=jpg&q=85',
-    features: ['Wide color range', 'Smooth finish', 'Durable']
+    id: 'bb-tilegrout',
+    name: 'Tile Grout',
+    description: 'Polymer-based sanded cement grout for wall/floor tiles',
+    image: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/8p19sbhd_Screenshot%202026-03-14%20at%204.04.24%E2%80%AFPM.png',
+    features: ['24 colors', 'Weather resistant', 'Non-cracking']
   },
   {
-    id: 'bb3',
-    name: 'Surface Cleaner',
-    description: 'Multi-purpose cleaner for various surfaces',
-    image: 'https://images.unsplash.com/photo-1637241612956-b7309005288b?crop=entropy&cs=srgb&fm=jpg&q=85',
-    features: ['Versatile', 'Eco-friendly', 'Effective']
+    id: 'bb-epoxygrout',
+    name: 'Epoxy Grout',
+    description: 'Three component chemical resistant epoxy grout',
+    image: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/ezw90l00_Screenshot%202026-03-16%20at%203.59.17%E2%80%AFPM.png',
+    features: ['Stain free', 'Chemical resistant', 'Weather resistant']
+  },
+  {
+    id: 'bb-tilecleaner',
+    name: 'Tile Cleaner',
+    description: 'Heavy duty hydrochloric-based cleaner',
+    image: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/fpgffh2i_Screenshot%202026-03-16%20at%203.57.48%E2%80%AFPM.png',
+    features: ['Fast acting', 'Removes cement', 'Professional grade']
   }
 ];
 
