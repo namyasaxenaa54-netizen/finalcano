@@ -13,8 +13,8 @@ const LightThemeHero = () => {
       subtitle: 'Tile Adhesive Excellence',
       color: '#E67E22',
       lightColor: '#FFF5EE',
-      image: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/189kmljp_image.png',
-      icon: '🐘'
+      image: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/t1pe2odd_Screenshot%202026-03-16%20at%208.27.06%E2%80%AFPM.png',
+      logo: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/cwqu8ri7_Screenshot%202026-03-10%20at%206.05.54%E2%80%AFPM.png'
     },
     {
       id: 'blackberry',
@@ -23,8 +23,8 @@ const LightThemeHero = () => {
       subtitle: 'Epoxy Grout Solutions',
       color: '#8E44AD',
       lightColor: '#F4ECF7',
-      image: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/cxuxz24x_epoxy%20mockup.png',
-      icon: '🫐'
+      image: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/7d6mkjxi_Screenshot%202026-03-16%20at%203.59.46%E2%80%AFPM.png',
+      logo: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/x4i589o8_Print_Transparent%20%281%29%20copy.pdf'
     },
     {
       id: 'furniture',
@@ -122,14 +122,27 @@ const LightThemeHero = () => {
 
                 {/* Content */}
                 <div className="relative h-full flex flex-col justify-between p-8">
-                  {/* Top: Icon Badge */}
+                  {/* Top: Logo Badge */}
                   <div className="flex justify-between items-start">
-                    <div 
-                      className="w-16 h-16 rounded-2xl flex items-center justify-center text-3xl shadow-lg"
-                      style={{ backgroundColor: brand.lightColor }}
-                    >
-                      {brand.icon}
-                    </div>
+                    {brand.logo ? (
+                      <div 
+                        className="w-20 h-20 rounded-2xl flex items-center justify-center shadow-lg p-3"
+                        style={{ backgroundColor: 'white' }}
+                      >
+                        <img 
+                          src={brand.logo} 
+                          alt={`${brand.name} logo`}
+                          className="w-full h-full object-contain"
+                        />
+                      </div>
+                    ) : (
+                      <div 
+                        className="w-16 h-16 rounded-2xl flex items-center justify-center text-3xl shadow-lg"
+                        style={{ backgroundColor: brand.lightColor }}
+                      >
+                        {brand.icon}
+                      </div>
+                    )}
                     <div className="px-4 py-2 rounded-full bg-white/20 backdrop-blur-md border border-white/30">
                       <span className="text-white text-xs font-semibold">{brand.tagline}</span>
                     </div>

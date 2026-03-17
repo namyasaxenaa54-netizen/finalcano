@@ -167,6 +167,7 @@ export const blackberryBrandData = {
   tagline: 'Premium Solutions for Perfect Finishes',
   brandColor: '#8E44AD',
   lightColor: '#F4ECF7',
+  logo: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/x4i589o8_Print_Transparent%20%281%29%20copy.pdf',
   bannerImage: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/7d6mkjxi_Screenshot%202026-03-16%20at%203.59.46%E2%80%AFPM.png',
   sections: {
     adhesives: {
@@ -333,6 +334,7 @@ export const canoBondBrandData = {
   tagline: 'German Intelligence. Unshakeable Bond.',
   brandColor: '#E67E22',
   lightColor: '#FFF5EE',
+  logo: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/cwqu8ri7_Screenshot%202026-03-10%20at%206.05.54%E2%80%AFPM.png',
   bannerImage: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/t1pe2odd_Screenshot%202026-03-16%20at%208.27.06%E2%80%AFPM.png',
   sections: {
     adhesives: {

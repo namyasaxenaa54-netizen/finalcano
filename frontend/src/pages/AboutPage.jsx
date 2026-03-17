@@ -119,7 +119,13 @@ const AboutPage = () => {
               onClick={() => navigate('/canobond')}
               className="cursor-pointer bg-gradient-to-br from-[#FFF5EE] to-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
             >
-              <div className="text-6xl mb-4">🐘</div>
+              <div className="w-24 h-24 mb-4 mx-auto bg-white rounded-2xl p-4 shadow-md">
+                <img 
+                  src="https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/cwqu8ri7_Screenshot%202026-03-10%20at%206.05.54%E2%80%AFPM.png"
+                  alt="CanoBond logo"
+                  className="w-full h-full object-contain"
+                />
+              </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-3">CanoBond</h3>
               <p className="text-gray-600 mb-4">German Intelligence. Unshakeable Bond.</p>
               <p className="text-sm text-gray-500">Premium tile adhesives and construction chemicals for professional applications.</p>
