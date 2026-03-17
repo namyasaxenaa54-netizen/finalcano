@@ -30,13 +30,13 @@ const Header = () => {
       <div className="bg-gradient-to-r from-[#E67E22] to-[#8E44AD] text-white py-2">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-wrap justify-between items-center text-xs sm:text-sm">
           <div className="flex items-center space-x-4">
-            <a href="tel:9520899699" className="flex items-center space-x-1 hover:opacity-80 transition-opacity">
+            <a href="tel:+918937988585" className="flex items-center space-x-1 hover:opacity-80 transition-opacity">
               <Phone size={14} />
-              <span>9520899699</span>
+              <span>+91 89379 88585</span>
             </a>
-            <a href="mailto:info@canocrystal.com" className="hidden sm:flex items-center space-x-1 hover:opacity-80 transition-opacity">
+            <a href="mailto:Info@canocrystal.com" className="hidden sm:flex items-center space-x-1 hover:opacity-80 transition-opacity">
               <Mail size={14} />
-              <span>info@canocrystal.com</span>
+              <span>Info@canocrystal.com</span>
             </a>
           </div>
           <div className="text-xs">

@@ -535,7 +535,22 @@ export const industries = [
 ];
 
 export const contactInfo = {
-  email: 'info@canocrystal.com',
-  phone: '+91 1234567890',
-  address: 'CanoCrystal Industries, India'
+  email: 'Info@canocrystal.com',
+  phone: '+91 89379 88585',
+  address: 'Plot No 29, Sector 142, Noida, Uttar Pradesh India 201305',
+  manufacturing: 'CANO DRYMIX Alwar (Rajasthan)'
+};
+
+export const companyInfo = {
+  name: 'CANO Crystal',
+  tagline: 'Excellence in Every Structure',
+  description: 'CANO Crystal delivers high-performance tile adhesives designed for strength, precision, and long-term durability.',
+  mission: 'To manufacture reliable, high-performance tile adhesive solutions that deliver consistent bonding strength, application ease, and long-term durability across all construction environments.',
+  vision: 'To become a trusted name in tile fixing solutions by setting new benchmarks in quality, performance, and application reliability.',
+  stats: {
+    plants: '10+',
+    personnel: '300+',
+    projects: '562+',
+    customerSatisfaction: '99%'
+  }
 };
