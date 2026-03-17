@@ -78,9 +78,6 @@ const Header = () => {
                 {link.name}
               </button>
             ))}
-            <Button className="bg-gradient-to-r from-[#E67E22] to-[#8E44AD] hover:from-[#D35400] hover:to-[#7D3C98] text-white rounded-full px-6 py-2 shadow-lg hover:shadow-xl transition-all duration-300">
-              Get Quote
-            </Button>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -112,9 +109,6 @@ const Header = () => {
                 {link.name}
               </button>
             ))}
-            <Button className="w-full bg-gradient-to-r from-[#E67E22] to-[#8E44AD] text-white rounded-full py-3 shadow-lg">
-              Get Quote
-            </Button>
           </nav>
         )}
       </div>

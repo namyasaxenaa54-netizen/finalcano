@@ -1,32 +1,34 @@
 import React from 'react';
-import { Facebook, Twitter, Instagram, Linkedin, Mail } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
 
 const Footer = () => {
+  const navigate = useNavigate();
+
   const brandLinks = [
-    { name: 'CanoBond', href: '#canobond' },
-    { name: 'Blackberry', href: '#blackberry' },
-    { name: 'Furniture Collection', href: '#furniture' }
+    { name: 'CanoBond', path: '/canobond' },
+    { name: 'Blackberry', path: '/blackberry' },
+    { name: 'Furniture Collection', path: '/furniture' }
   ];
 
   const productLinks = [
-    { name: 'Tile Adhesive', href: '#products' },
-    { name: 'Epoxy Grout', href: '#products' },
-    { name: 'Tile Cleaner', href: '#products' },
-    { name: 'Premium Furniture', href: '#products' }
+    { name: 'Tile Adhesives', path: '/canobond' },
+    { name: 'Epoxy Grout', path: '/blackberry' },
+    { name: 'Tile Cleaner', path: '/blackberry' },
+    { name: 'Premium Furniture', path: '/furniture' }
   ];
 
   const companyLinks = [
-    { name: 'About Us', href: '#about' },
-    { name: 'Distributors', href: '#distributors' },
-    { name: 'Contact', href: '#contact' },
-    { name: 'Careers', href: '#careers' }
+    { name: 'About Us', path: '/about' },
+    { name: 'Distributors', path: '/distributors' },
+    { name: 'Contact', path: '/contact' }
   ];
 
   const socialLinks = [
-    { icon: Facebook, href: '#', color: 'hover:text-blue-600' },
-    { icon: Twitter, href: '#', color: 'hover:text-blue-400' },
-    { icon: Instagram, href: '#', color: 'hover:text-pink-600' },
-    { icon: Linkedin, href: '#', color: 'hover:text-blue-700' }
+    { icon: Facebook, href: 'https://facebook.com/canocrystal', label: 'Facebook', color: 'hover:text-[#1877F2]' },
+    { icon: Instagram, href: 'https://instagram.com/canocrystal', label: 'Instagram', color: 'hover:text-[#E4405F]' },
+    { icon: Linkedin, href: 'https://linkedin.com/company/canocrystal', label: 'LinkedIn', color: 'hover:text-[#0A66C2]' },
+    { icon: Twitter, href: 'https://twitter.com/canocrystal', label: 'Twitter', color: 'hover:text-[#1DA1F2]' }
   ];
 
   return (
@@ -45,9 +47,9 @@ const Footer = () => {
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 sm:gap-12 mb-12 sm:mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 mb-12 sm:mb-16">
           {/* Brand Section */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-1">
             <div className="mb-6">
               <img 
                 src="https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/lrvcnut7_Screenshot%202026-03-14%20at%203.14.05%E2%80%AFPM.png"
@@ -58,24 +60,34 @@ const Footer = () => {
             <p className="text-[#3A3A3A] mb-6 leading-relaxed text-sm sm:text-base">
               Engineering brands for modern living. Delivering excellence across construction chemicals and premium furniture solutions.
             </p>
-            <div className="flex items-center space-x-2 text-[#3A3A3A]">
-              <Mail size={18} />
-              <span className="text-sm">info@canocrystal.com</span>
+            <div className="space-y-2 text-[#3A3A3A] text-sm">
+              <div className="flex items-center space-x-2">
+                <Phone size={16} />
+                <a href="tel:+918937988585" className="hover:text-[#E67E22]">+91 89379 88585</a>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Mail size={16} />
+                <a href="mailto:Info@canocrystal.com" className="hover:text-[#E67E22]">Info@canocrystal.com</a>
+              </div>
+              <div className="flex items-start space-x-2">
+                <MapPin size={16} className="mt-1 flex-shrink-0" />
+                <span>Plot No 29, Sector 142, Noida, UP 201305</span>
+              </div>
             </div>
           </div>
 
           {/* Brands */}
           <div>
-            <h4 className="font-bold text-[#2C2C2C] mb-4">Our Brands</h4>
+            <h4 className="font-bold text-[#2C2C2C] mb-4 text-lg">Our Brands</h4>
             <ul className="space-y-3">
               {brandLinks.map((link) => (
                 <li key={link.name}>
-                  <a
-                    href={link.href}
-                    className="text-[#3A3A3A] hover:text-[#B76E79] transition-colors duration-200 text-sm sm:text-base"
+                  <button
+                    onClick={() => navigate(link.path)}
+                    className="text-[#3A3A3A] hover:text-[#E67E22] transition-colors duration-200 text-sm sm:text-base text-left"
                   >
                     {link.name}
-                  </a>
+                  </button>
                 </li>
               ))}
             </ul>
@@ -83,16 +95,16 @@ const Footer = () => {
 
           {/* Products */}
           <div>
-            <h4 className="font-bold text-[#2C2C2C] mb-4">Products</h4>
+            <h4 className="font-bold text-[#2C2C2C] mb-4 text-lg">Products</h4>
             <ul className="space-y-3">
               {productLinks.map((link) => (
                 <li key={link.name}>
-                  <a
-                    href={link.href}
-                    className="text-[#3A3A3A] hover:text-[#B76E79] transition-colors duration-200 text-sm sm:text-base"
+                  <button
+                    onClick={() => navigate(link.path)}
+                    className="text-[#3A3A3A] hover:text-[#E67E22] transition-colors duration-200 text-sm sm:text-base text-left"
                   >
                     {link.name}
-                  </a>
+                  </button>
                 </li>
               ))}
             </ul>
@@ -100,16 +112,16 @@ const Footer = () => {
 
           {/* Company */}
           <div>
-            <h4 className="font-bold text-[#2C2C2C] mb-4">Company</h4>
+            <h4 className="font-bold text-[#2C2C2C] mb-4 text-lg">Company</h4>
             <ul className="space-y-3">
               {companyLinks.map((link) => (
                 <li key={link.name}>
-                  <a
-                    href={link.href}
-                    className="text-[#3A3A3A] hover:text-[#B76E79] transition-colors duration-200 text-sm sm:text-base"
+                  <button
+                    onClick={() => navigate(link.path)}
+                    className="text-[#3A3A3A] hover:text-[#E67E22] transition-colors duration-200 text-sm sm:text-base text-left"
                   >
                     {link.name}
-                  </a>
+                  </button>
                 </li>
               ))}
             </ul>
@@ -117,7 +129,7 @@ const Footer = () => {
         </div>
 
         {/* Divider */}
-        <div className="border-t border-[#B76E79]/20 mb-8" />
+        <div className="border-t border-[#E67E22]/20 mb-8" />
 
         {/* Bottom Section */}
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
@@ -128,43 +140,27 @@ const Footer = () => {
 
           {/* Social Links */}
           <div className="flex items-center space-x-6">
-            {socialLinks.map((social, index) => {
+            {socialLinks.map((social) => {
               const Icon = social.icon;
               return (
                 <a
-                  key={index}
+                  key={social.label}
                   href={social.href}
-                  className={`text-[#3A3A3A] transition-colors duration-200 ${social.color.replace('hover:text-blue-600', 'hover:text-[#B76E79]').replace('hover:text-blue-400', 'hover:text-[#C9A0A0]').replace('hover:text-pink-600', 'hover:text-[#8B7E8B]').replace('hover:text-blue-700', 'hover:text-[#A68A7A]')}`}
+                  className={`text-[#3A3A3A] transition-all duration-300 hover:scale-110 ${social.color}`}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={social.label}
                 >
-                  <Icon size={20} />
+                  <Icon size={22} />
                 </a>
               );
             })}
           </div>
-
-          {/* Legal Links */}
-          <div className="flex items-center space-x-6 text-sm">
-            <a href="#privacy" className="text-[#3A3A3A] hover:text-[#B76E79] transition-colors duration-200">
-              Privacy Policy
-            </a>
-            <a href="#terms" className="text-[#3A3A3A] hover:text-[#B76E79] transition-colors duration-200">
-              Terms of Service
-            </a>
-          </div>
         </div>
 
-        {/* Powered by section */}
-        <div className="mt-12 text-center">
-          <div className="inline-flex items-center justify-center space-x-2 text-[#3A3A3A] text-sm">
-            <img 
-              src="https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/lrvcnut7_Screenshot%202026-03-14%20at%203.14.05%E2%80%AFPM.png"
-              alt="CanoCrystal"
-              className="h-6 w-auto"
-            />
-            <span>Powered by CanoCrystal</span>
-          </div>
+        {/* Certifications */}
+        <div className="mt-8 text-center text-sm text-[#3A3A3A]">
+          <p>ISO 9001:2015 Certified | Manufacturing: CANO DRYMIX Alwar (Rajasthan)</p>
         </div>
       </div>
     </footer>
