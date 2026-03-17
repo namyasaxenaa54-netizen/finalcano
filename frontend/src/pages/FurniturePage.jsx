@@ -26,10 +26,17 @@ const FurniturePage = () => {
             <ArrowLeft size={18} className="sm:w-5 sm:h-5" />
             <span className="font-semibold text-sm sm:text-base">Back to Home</span>
           </button>
-          <img 
+          <button
+            onClick={() => navigate('/')} 
+            className="hover:opacity-80 transition-opacity cursor-pointer"
+            aria-label="Return to homepage"
+          >
+            <img 
             src="https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/lrvcnut7_Screenshot%202026-03-14%20at%203.14.05%E2%80%AFPM.png"
             alt="CanoCrystal"
             className="h-10 sm:h-12 w-auto"
+            />
+          </button
           />
         </div>
       </div>
@@ -73,7 +80,12 @@ const FurniturePage = () => {
             {furnitureProducts.map((product) => (
               <div key={product.id} className="group bg-white rounded-2xl md:rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
                 <div className="relative h-48 sm:h-56 md:h-64 overflow-hidden">
-                  <img 
+                  <button
+            onClick={() => navigate('/')} 
+            className="hover:opacity-80 transition-opacity cursor-pointer"
+            aria-label="Return to homepage"
+          >
+            <img 
                     src={product.image}
                     alt={product.name}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"

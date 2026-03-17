@@ -123,11 +123,17 @@ const BrandPageTemplate = ({ brandData }) => {
             <ArrowLeft size={18} className="sm:w-5 sm:h-5" />
             <span className="font-semibold text-sm sm:text-base">Back to Home</span>
           </button>
-          <img 
-            src="https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/lrvcnut7_Screenshot%202026-03-14%20at%203.14.05%E2%80%AFPM.png"
-            alt="CanoCrystal"
-            className="h-10 sm:h-12 w-auto"
-          />
+          <button
+            onClick={() => navigate('/')}
+            className="hover:opacity-80 transition-opacity cursor-pointer"
+            aria-label="Return to homepage"
+          >
+            <img 
+              src="https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/lrvcnut7_Screenshot%202026-03-14%20at%203.14.05%E2%80%AFPM.png"
+              alt="CanoCrystal"
+              className="h-10 sm:h-12 w-auto"
+            />
+          </button>
         </div>
       </div>
 
