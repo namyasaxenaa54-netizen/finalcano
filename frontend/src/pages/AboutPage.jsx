@@ -24,10 +24,11 @@ const AboutPage = () => {
             aria-label="Return to homepage"
           >
             <img 
-            src="https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/lrvcnut7_Screenshot%202026-03-14%20at%203.14.05%E2%80%AFPM.png"
-            alt="CanoCrystal"
-            className="h-12 w-auto"
-          />
+              src="https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/lrvcnut7_Screenshot%202026-03-14%20at%203.14.05%E2%80%AFPM.png"
+              alt="CanoCrystal"
+              className="h-12 w-auto"
+            />
+          </button>
         </div>
       </div>
 
@@ -125,12 +126,7 @@ const AboutPage = () => {
               className="cursor-pointer bg-gradient-to-br from-[#FFF5EE] to-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
             >
               <div className="w-24 h-24 mb-4 mx-auto bg-white rounded-2xl p-4 shadow-md">
-                <button
-            onClick={() => navigate('/')} 
-            className="hover:opacity-80 transition-opacity cursor-pointer"
-            aria-label="Return to homepage"
-          >
-            <img 
+                <img 
                   src="https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/cwqu8ri7_Screenshot%202026-03-10%20at%206.05.54%E2%80%AFPM.png"
                   alt="CanoBond logo"
                   className="w-full h-full object-contain"

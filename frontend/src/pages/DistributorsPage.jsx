@@ -67,10 +67,11 @@ const DistributorsPage = () => {
             aria-label="Return to homepage"
           >
             <img 
-            src="https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/lrvcnut7_Screenshot%202026-03-14%20at%203.14.05%E2%80%AFPM.png"
-            alt="CanoCrystal"
-            className="h-12 w-auto"
-          />
+              src="https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/lrvcnut7_Screenshot%202026-03-14%20at%203.14.05%E2%80%AFPM.png"
+              alt="CanoCrystal"
+              className="h-12 w-auto"
+            />
+          </button>
         </div>
       </div>
 
