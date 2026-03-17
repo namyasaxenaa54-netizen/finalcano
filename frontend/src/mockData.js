@@ -433,7 +433,7 @@ export const blackberryProducts = [
     id: 'bb-tilegrout',
     name: 'Tile Grout',
     description: 'Polymer-based sanded cement grout for wall/floor tiles',
-    image: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/8p19sbhd_Screenshot%202026-03-14%20at%204.04.24%E2%80%AFPM.png',
+    image: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/3vsbxhjh_Screenshot%202026-03-16%20at%203.58.27%E2%80%AFPM.png',
     features: ['24 colors', 'Weather resistant', 'Non-cracking']
   },
   {

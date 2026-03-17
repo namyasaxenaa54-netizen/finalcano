@@ -78,13 +78,13 @@ const ProductsShowcase = () => {
                     key={product.id}
                     className="group cursor-pointer overflow-hidden rounded-2xl border-0 shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 bg-white"
                   >
-                    <div className="relative h-48 sm:h-56 overflow-hidden">
+                    <div className="relative h-48 sm:h-56 overflow-hidden bg-gray-50">
                       <img
                         src={product.image}
                         alt={product.name}
-                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        className="w-full h-full object-contain p-3 transition-transform duration-500 group-hover:scale-105"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#2C2C2C]/60 via-transparent to-transparent" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#2C2C2C]/20 via-transparent to-transparent pointer-events-none" />
                       
                       {/* Premium badge */}
                       <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1">
