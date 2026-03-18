@@ -1,10 +1,46 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, Factory, Award, Globe, Users, Target, Eye } from 'lucide-react';
 import { Button } from '../components/ui/button';
+import API from '../utils/api';
 
 const AboutPage = () => {
   const navigate = useNavigate();
+  const [companyInfo, setCompanyInfo] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    loadCompanyInfo();
+  }, []);
+
+  const loadCompanyInfo = async () => {
+    try {
+      const data = await API.getCompanyInfo();
+      if (data) {
+        setCompanyInfo(data);
+      }
+    } catch (error) {
+      console.error('Failed to load company info:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-2xl text-gray-600">Loading...</div>
+      </div>
+    );
+  }
+
+  if (!companyInfo) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-2xl text-gray-600">Company information not found</div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#FDFBF7] via-white to-[#FFF9F0]">

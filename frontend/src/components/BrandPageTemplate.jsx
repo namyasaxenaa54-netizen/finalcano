@@ -9,7 +9,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const BrandPageTemplate = ({ brandData }) => {
+const BrandPageTemplate = ({ brandData, products = [] }) => {
   const navigate = useNavigate();
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -18,6 +18,14 @@ const BrandPageTemplate = ({ brandData }) => {
   const productsRef = useRef(null);
 
   const { name, tagline, brandColor, lightColor, bannerImage, sections } = brandData;
+
+  // Organize products by section
+  const productsBySection = products.reduce((acc, product) => {
+    const section = product.section || 'other';
+    if (!acc[section]) acc[section] = [];
+    acc[section].push(product);
+    return acc;
+  }, {});
 
   useEffect(() => {
     // Minimal loading delay for instant appearance
@@ -190,16 +198,16 @@ const BrandPageTemplate = ({ brandData }) => {
         </div>
 
         {/* SECTION 1: TILE ADHESIVES */}
-        {sections.adhesives && sections.adhesives.products.length > 0 && (
+        {productsBySection.adhesives && productsBySection.adhesives.length > 0 && (
           <section className="mb-12 md:mb-20">
             <div className="text-center mb-8 md:mb-12">
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 md:mb-4 px-4">
-                {sections.adhesives.title}
+                {sections?.adhesives?.title || 'Tile Adhesives'}
               </h2>
               <div className="w-16 sm:w-20 md:w-24 h-1 rounded-full mx-auto" style={{ backgroundColor: brandColor }} />
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
-              {sections.adhesives.products.map((product) => (
+              {productsBySection.adhesives.map((product) => (
                 <ProductCard key={product.id} product={product} />
               ))}
             </div>
@@ -207,16 +215,16 @@ const BrandPageTemplate = ({ brandData }) => {
         )}
 
         {/* SECTION 2: GROUTS & SOLUTIONS */}
-        {sections.grouts && sections.grouts.products.length > 0 && (
+        {productsBySection.grouts && productsBySection.grouts.length > 0 && (
           <section className="mb-12 md:mb-20">
             <div className="text-center mb-8 md:mb-12">
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 md:mb-4 px-4">
-                {sections.grouts.title}
+                {sections?.grouts?.title || 'Grouts & Solutions'}
               </h2>
               <div className="w-16 sm:w-20 md:w-24 h-1 rounded-full mx-auto" style={{ backgroundColor: brandColor }} />
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-12 md:mb-16">
-              {sections.grouts.products.map((product) => (
+              {productsBySection.grouts.map((product) => (
                 <ProductCard key={product.id} product={product} />
               ))}
             </div>
@@ -229,16 +237,16 @@ const BrandPageTemplate = ({ brandData }) => {
         )}
 
         {/* SECTION 3: CLEANING SOLUTIONS */}
-        {sections.cleaning && sections.cleaning.products.length > 0 && (
+        {productsBySection.cleaning && productsBySection.cleaning.length > 0 && (
           <section className="mb-12 md:mb-20">
             <div className="text-center mb-8 md:mb-12">
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 md:mb-4 px-4">
-                {sections.cleaning.title}
+                {sections?.cleaning?.title || 'Cleaning Solutions'}
               </h2>
               <div className="w-16 sm:w-20 md:w-24 h-1 rounded-full mx-auto" style={{ backgroundColor: brandColor }} />
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
-              {sections.cleaning.products.map((product) => (
+              {productsBySection.cleaning.map((product) => (
                 <ProductCard key={product.id} product={product} />
               ))}
             </div>
