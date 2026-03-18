@@ -126,7 +126,9 @@ const LightThemeHero = () => {
                   <div className="flex flex-col items-center text-center">
                     {brand.logo ? (
                       <div 
-                        className="w-44 h-44 rounded-3xl overflow-hidden shadow-2xl p-4 mb-6 bg-white group-hover:scale-105 transition-transform duration-500 flex items-center justify-center"
+                        className={`w-44 h-44 rounded-3xl overflow-hidden shadow-2xl mb-6 bg-white group-hover:scale-105 transition-transform duration-500 ${
+                          brand.id === 'canobond' ? '' : 'p-4 flex items-center justify-center'
+                        }`}
                         style={{ 
                           border: `4px solid ${brand.color}`,
                           boxShadow: `0 15px 50px ${brand.color}50`
@@ -135,7 +137,9 @@ const LightThemeHero = () => {
                         <img 
                           src={brand.logo} 
                           alt={`${brand.name} logo`}
-                          className="w-full h-full object-contain"
+                          className={`w-full h-full ${
+                            brand.id === 'canobond' ? 'object-cover' : 'object-contain'
+                          }`}
                         />
                       </div>
                     ) : (
