@@ -126,7 +126,7 @@ const LightThemeHero = () => {
                   <div className="flex flex-col items-center text-center">
                     {brand.logo ? (
                       <div 
-                        className="w-44 h-44 rounded-3xl flex items-center justify-center shadow-2xl p-8 mb-6 bg-white group-hover:scale-105 transition-transform duration-500 backdrop-blur-sm"
+                        className="w-44 h-44 rounded-3xl overflow-hidden shadow-2xl mb-6 bg-white group-hover:scale-105 transition-transform duration-500"
                         style={{ 
                           border: `4px solid ${brand.color}`,
                           boxShadow: `0 15px 50px ${brand.color}50`
@@ -135,12 +135,12 @@ const LightThemeHero = () => {
                         <img 
                           src={brand.logo} 
                           alt={`${brand.name} logo`}
-                          className="w-full h-full object-contain filter drop-shadow-lg"
+                          className="w-full h-full object-cover"
                         />
                       </div>
                     ) : (
                       <div 
-                        className="w-36 h-36 rounded-3xl flex items-center justify-center text-7xl shadow-2xl mb-6 bg-white group-hover:scale-105 transition-transform duration-500"
+                        className="w-44 h-44 rounded-3xl flex items-center justify-center text-7xl shadow-2xl mb-6 bg-white group-hover:scale-105 transition-transform duration-500"
                         style={{ 
                           border: `4px solid ${brand.color}`,
                           boxShadow: `0 15px 50px ${brand.color}50`
