@@ -24,7 +24,7 @@ const LightThemeHero = () => {
       color: '#8E44AD',
       lightColor: '#F4ECF7',
       image: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/7d6mkjxi_Screenshot%202026-03-16%20at%203.59.46%E2%80%AFPM.png',
-      logo: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/x4i589o8_Print_Transparent%20%281%29%20copy.pdf'
+      logo: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/ivdpxzwa_Screenshot%202026-03-17%20at%205.35.40%E2%80%AFPM.png'
     },
     {
       id: 'furniture',

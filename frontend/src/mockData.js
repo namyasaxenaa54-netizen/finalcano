@@ -151,7 +151,7 @@ export const premiumColors = {
 export const brandLogos = {
   canoCrystal: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/lrvcnut7_Screenshot%202026-03-14%20at%203.14.05%E2%80%AFPM.png',
   canoBond: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/yusg4lmi_Print%20%281%29.pdf',
-  blackberry: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/unoson20_black%20berry%20bold.pdf'
+  blackberry: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/ivdpxzwa_Screenshot%202026-03-17%20at%205.35.40%E2%80%AFPM.png'
 };
 
 // Brand taglines
@@ -167,7 +167,7 @@ export const blackberryBrandData = {
   tagline: 'Premium Solutions for Perfect Finishes',
   brandColor: '#8E44AD',
   lightColor: '#F4ECF7',
-  logo: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/x4i589o8_Print_Transparent%20%281%29%20copy.pdf',
+  logo: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/ivdpxzwa_Screenshot%202026-03-17%20at%205.35.40%E2%80%AFPM.png',
   bannerImage: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/7d6mkjxi_Screenshot%202026-03-16%20at%203.59.46%E2%80%AFPM.png',
   sections: {
     adhesives: {

@@ -140,7 +140,13 @@ const AboutPage = () => {
               onClick={() => navigate('/blackberry')}
               className="cursor-pointer bg-gradient-to-br from-[#F4ECF7] to-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
             >
-              <div className="text-6xl mb-4">🫐</div>
+              <div className="w-24 h-24 mb-4 mx-auto bg-white rounded-2xl p-4 shadow-md">
+                <img 
+                  src="https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/ivdpxzwa_Screenshot%202026-03-17%20at%205.35.40%E2%80%AFPM.png"
+                  alt="Blackberry logo"
+                  className="w-full h-full object-contain"
+                />
+              </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-3">Blackberry</h3>
               <p className="text-gray-600 mb-4">Premium Solutions for Perfect Finishes</p>
               <p className="text-sm text-gray-500">Specialized epoxy grouts and chemical solutions for aesthetic perfection.</p>
