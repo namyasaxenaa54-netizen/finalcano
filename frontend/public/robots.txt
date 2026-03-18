@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+
+Sitemap: https://crystal-brands-1.preview.emergentagent.com/sitemap.xml

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import AdminAPI from '../utils/api';
 import { toast } from 'sonner';
 import { Plus, Edit2, Trash2, Search, X } from 'lucide-react';
+import ImageUpload from '../components/ImageUpload';
 
 const ProductsManager = () => {
   const [products, setProducts] = useState([]);
@@ -305,13 +306,18 @@ const ProductsManager = () => {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Image URL *</label>
+                <ImageUpload 
+                  label="Product Image"
+                  currentImage={formData.image}
+                  onImageUpload={(url) => setFormData({...formData, image: url})}
+                />
+                <p className="text-xs text-gray-500 mt-1">Or paste image URL below:</p>
                 <input
                   type="url"
                   value={formData.image}
                   onChange={(e) => setFormData({...formData, image: e.target.value})}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
-                  required
+                  placeholder="https://example.com/image.jpg"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 mt-1"
                 />
               </div>
 

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import BrandPageTemplate from '../components/BrandPageTemplate';
 import API from '../utils/api';
+import SEO from '../components/SEO';
 import { canoBondBrandData } from '../mockData';
 
 const CanoBondPage = () => {
@@ -47,7 +48,16 @@ const CanoBondPage = () => {
     );
   }
 
-  return <BrandPageTemplate brandData={brandData} products={products} />;
+  return (
+    <>
+      <SEO 
+        title="CanoBond - German Intelligence. Unshakeable Bond | CanoCrystal"
+        description="Professional-grade adhesives and construction chemicals for superior bonding and durability. Premium tile adhesives from CanoBond."
+        keywords="canobond, tile adhesive, construction adhesive, german quality, premium adhesive"
+      />
+      <BrandPageTemplate brandData={brandData} products={products} />
+    </>
+  );
 };
 
 export default CanoBondPage;

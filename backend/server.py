@@ -7,7 +7,7 @@ import logging
 from pathlib import Path
 
 # Import routes
-from routes import auth, brands, products, company, admin
+from routes import auth, brands, products, company, admin, upload
 
 ROOT_DIR = Path(__file__).parent
 load_dotenv(ROOT_DIR / '.env')
@@ -48,6 +48,7 @@ api_router.include_router(brands.router)
 api_router.include_router(products.router)
 api_router.include_router(company.router)
 api_router.include_router(admin.router)
+api_router.include_router(upload.router)
 
 # Include the API router in the main app
 app.include_router(api_router)

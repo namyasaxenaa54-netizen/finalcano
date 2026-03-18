@@ -1,25 +1,28 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import SleekLoader from './components/Loader';
-import Header from './components/Header';
-import LightThemeHero from './components/HeroSection';
-import ProductsShowcase from './components/ProductsShowcase';
-import BrandsEcosystem from './components/BrandsEcosystem';
-import TechnologySection from './components/TechnologySection';
-import IndustriesSection from './components/IndustriesSection';
-import ContactSection from './components/ContactSection';
-import Footer from './components/Footer';
-import CanoBondPage from './pages/CanoBondPage';
-import BlackberryPage from './pages/BlackberryPage';
-import FurniturePage from './pages/FurniturePage';
-import AboutPage from './pages/AboutPage';
-import ContactPage from './pages/ContactPage';
-import DistributorsPage from './pages/DistributorsPage';
-import SocialMediaFloat from './components/SocialMediaFloat';
+import SEO from './components/SEO';
+
+// Lazy load pages for better performance
+const Header = lazy(() => import('./components/Header'));
+const LightThemeHero = lazy(() => import('./components/HeroSection'));
+const ProductsShowcase = lazy(() => import('./components/ProductsShowcase'));
+const BrandsEcosystem = lazy(() => import('./components/BrandsEcosystem'));
+const TechnologySection = lazy(() => import('./components/TechnologySection'));
+const IndustriesSection = lazy(() => import('./components/IndustriesSection'));
+const ContactSection = lazy(() => import('./components/ContactSection'));
+const Footer = lazy(() => import('./components/Footer'));
+const CanoBondPage = lazy(() => import('./pages/CanoBondPage'));
+const BlackberryPage = lazy(() => import('./pages/BlackberryPage'));
+const FurniturePage = lazy(() => import('./pages/FurniturePage'));
+const AboutPage = lazy(() => import('./pages/AboutPage'));
+const ContactPage = lazy(() => import('./pages/ContactPage'));
+const DistributorsPage = lazy(() => import('./pages/DistributorsPage'));
+const SocialMediaFloat = lazy(() => import('./components/SocialMediaFloat'));
 import { Toaster } from './components/ui/sonner';
 
-// Admin imports
+// Admin imports (not lazy loaded for security)
 import { AuthProvider } from './admin/context/AuthContext';
 import ProtectedRoute from './admin/components/ProtectedRoute';
 import AdminLogin from './admin/pages/AdminLogin';
@@ -68,33 +71,35 @@ function App() {
         
         {!loading && (
           <>
-            <Routes>
-              {/* Public Routes */}
-              <Route path="/" element={<HomePage />} />
-              <Route path="/canobond" element={<CanoBondPage />} />
-              <Route path="/blackberry" element={<BlackberryPage />} />
-              <Route path="/furniture" element={<FurniturePage />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/contact" element={<ContactPage />} />
-              <Route path="/distributors" element={<DistributorsPage />} />
+            <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="text-xl">Loading...</div></div>}>
+              <Routes>
+                {/* Public Routes */}
+                <Route path="/" element={<HomePage />} />
+                <Route path="/canobond" element={<CanoBondPage />} />
+                <Route path="/blackberry" element={<BlackberryPage />} />
+                <Route path="/furniture" element={<FurniturePage />} />
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/contact" element={<ContactPage />} />
+                <Route path="/distributors" element={<DistributorsPage />} />
 
-              {/* Admin Routes */}
-              <Route path="/admin/login" element={<AdminLogin />} />
-              <Route
-                path="/admin"
-                element={
-                  <ProtectedRoute>
-                    <AdminLayout />
-                  </ProtectedRoute>
-                }
-              >
-                <Route path="dashboard" element={<AdminDashboard />} />
-                <Route path="products" element={<ProductsManager />} />
-                <Route path="brands" element={<BrandsManager />} />
-                <Route path="company" element={<CompanyManager />} />
-              </Route>
-            </Routes>
-            <SocialMediaFloat />
+                {/* Admin Routes */}
+                <Route path="/admin/login" element={<AdminLogin />} />
+                <Route
+                  path="/admin"
+                  element={
+                    <ProtectedRoute>
+                      <AdminLayout />
+                    </ProtectedRoute>
+                  }
+                >
+                  <Route path="dashboard" element={<AdminDashboard />} />
+                  <Route path="products" element={<ProductsManager />} />
+                  <Route path="brands" element={<BrandsManager />} />
+                  <Route path="company" element={<CompanyManager />} />
+                </Route>
+              </Routes>
+              <SocialMediaFloat />
+            </Suspense>
             <Toaster />
           </>
         )}
