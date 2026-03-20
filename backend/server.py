@@ -53,10 +53,15 @@ api_router.include_router(upload.router)
 # Include the API router in the main app
 app.include_router(api_router)
 
+# Add CORS middleware
+cors_origins = os.environ.get('CORS_ORIGINS', '*')
+if cors_origins != '*':
+    cors_origins = [origin.strip() for origin in cors_origins.split(',')]
+    
 app.add_middleware(
     CORSMiddleware,
     allow_credentials=True,
-    allow_origins=os.environ.get('CORS_ORIGINS', '*').split(','),
+    allow_origins=cors_origins if cors_origins != '*' else ['*'],
     allow_methods=["*"],
     allow_headers=["*"],
 )

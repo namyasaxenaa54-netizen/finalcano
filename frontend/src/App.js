@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import SleekLoader from './components/Loader';
 import SEO from './components/SEO';
+import ErrorBoundary from './components/ErrorBoundary';
 
 // Lazy load pages for better performance
 const Header = lazy(() => import('./components/Header'));
@@ -65,14 +66,15 @@ function App() {
   }, []);
 
   return (
-    <AuthProvider>
-      <div className="App">
-        {loading && <SleekLoader onComplete={handleLoadingComplete} />}
-        
-        {!loading && (
-          <>
-            <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="text-xl">Loading...</div></div>}>
-              <Routes>
+    <ErrorBoundary>
+      <AuthProvider>
+        <div className="App">
+          {loading && <SleekLoader onComplete={handleLoadingComplete} />}
+          
+          {!loading && (
+            <>
+              <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="text-xl">Loading...</div></div>}>
+                <Routes>
                 {/* Public Routes */}
                 <Route path="/" element={<HomePage />} />
                 <Route path="/canobond" element={<CanoBondPage />} />
@@ -105,6 +107,7 @@ function App() {
         )}
       </div>
     </AuthProvider>
+    </ErrorBoundary>
   );
 }
 

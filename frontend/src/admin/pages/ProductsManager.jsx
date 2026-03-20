@@ -27,6 +27,7 @@ const ProductsManager = () => {
 
   useEffect(() => {
     loadProducts();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedBrand]);
 
   const loadProducts = async () => {

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import AdminAPI from '../utils/api';
-import { Package, Tag, TrendingUp, BarChart3 } from 'lucide-react';
+import { Package, Tag, TrendingUp, BarChart3, Building } from 'lucide-react';
 
 const AdminDashboard = () => {
   const [stats, setStats] = useState(null);
@@ -113,7 +113,7 @@ const AdminDashboard = () => {
             href="/admin/company"
             className="p-4 border-2 border-gray-200 rounded-lg hover:border-green-500 hover:bg-green-50 transition-all"
           >
-            <Package className="text-green-600 mb-2" size={24} />
+            <Building className="text-green-600 mb-2" size={24} />
             <h3 className="font-semibold text-gray-900">Company Info</h3>
             <p className="text-sm text-gray-600 mt-1">Edit company details</p>
           </a>
