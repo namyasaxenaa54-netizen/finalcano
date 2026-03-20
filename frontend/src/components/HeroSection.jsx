@@ -49,12 +49,12 @@ const LightThemeHero = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-20">
         {/* Hero Header */}
         <div className="text-center mb-20 pt-32">
-          {/* Logo - Increased size */}
+          {/* Logo - High quality, increased size */}
           <div className="mb-12 animate-fade-in">
             <img 
-              src="https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/mw1vdc0a_Screenshot_2026-03-19_at_4.20.39_PM-removebg-preview.png"
+              src="https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/r8rd43w6_web%20logo_page-0001.jpg"
               alt="CanoCrystal"
-              className="h-40 md:h-52 lg:h-60 w-auto mx-auto drop-shadow-2xl"
+              className="h-44 md:h-56 lg:h-64 w-auto mx-auto drop-shadow-2xl"
             />
           </div>
 
