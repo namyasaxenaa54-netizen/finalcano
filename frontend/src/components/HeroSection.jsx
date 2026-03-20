@@ -49,12 +49,12 @@ const LightThemeHero = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-20">
         {/* Hero Header */}
         <div className="text-center mb-20 pt-32">
-          {/* Logo - Final transparent version */}
+          {/* Logo - Final transparent version, 20% larger */}
           <div className="mb-12 animate-fade-in">
             <img 
               src="https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/kewlvn2b_erasebg-transformed.png"
               alt="CanoCrystal"
-              className="h-44 md:h-56 lg:h-64 w-auto mx-auto drop-shadow-2xl"
+              className="h-52 md:h-64 lg:h-80 w-auto mx-auto drop-shadow-2xl"
             />
           </div>
 
