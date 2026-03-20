@@ -52,9 +52,10 @@ const LightThemeHero = () => {
           {/* Logo - Final transparent version, 20% larger */}
           <div className="mb-12 animate-fade-in">
             <img 
-              src="https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/kewlvn2b_erasebg-transformed.png"
+              src="/logo-transparent.png"
               alt="CanoCrystal"
-              className="h-52 md:h-64 lg:h-80 w-auto mx-auto drop-shadow-2xl"
+              className="h-44 md:h-52 lg:h-64 w-auto mx-auto drop-shadow-2xl"
+              style={{ transform: 'scale(1.3)', transformOrigin: 'center' }}
             />
           </div>
 

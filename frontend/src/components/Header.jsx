@@ -56,9 +56,10 @@ const Header = () => {
             aria-label="Return to homepage"
           >
             <img
-              src="https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/kewlvn2b_erasebg-transformed.png"
+              src="/logo-transparent.png"
               alt="CanoCrystal - Return to Home"
-              className="h-16 sm:h-20 md:h-24 w-auto"
+              className="h-16 sm:h-20 md:h-20 w-auto"
+              style={{ transform: 'scale(1.4)', transformOrigin: 'center' }}
             />
           </button>
 
