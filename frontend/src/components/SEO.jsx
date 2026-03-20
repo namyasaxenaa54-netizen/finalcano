@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet';
 
 const SEO = ({ 
-  title = "CanoCrystal - Premium Construction Solutions",
+  title = "Cano Crystal | Tile Adhesive Experts",
   description = "CANO Crystal delivers high-performance tile adhesives, epoxy grouts, and construction chemicals designed for strength, precision, and long-term durability.",
   keywords = "tile adhesive, epoxy grout, construction chemicals, CanoBond, Blackberry, premium furniture, building materials",
   image = "https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/lrvcnut7_Screenshot%202026-03-14%20at%203.14.05%E2%80%AFPM.png",
