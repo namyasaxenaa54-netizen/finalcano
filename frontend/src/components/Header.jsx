@@ -49,7 +49,7 @@ const Header = () => {
       {/* Main header */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
         <div className="flex items-center justify-between gap-4">
-          {/* Logo - Final transparent version, increased size */}
+          {/* Logo - Final transparent version, perfectly sized */}
           <button 
             onClick={() => navigate('/')}
             className="flex items-center flex-shrink-0 hover:opacity-80 transition-opacity cursor-pointer"
@@ -58,8 +58,8 @@ const Header = () => {
             <img
               src="/logo-transparent.png"
               alt="CanoCrystal - Return to Home"
-              className="h-16 sm:h-20 md:h-20 w-auto"
-              style={{ transform: 'scale(1.4)', transformOrigin: 'center' }}
+              className="h-16 sm:h-18 md:h-20 w-auto"
+              style={{ transform: 'scale(1.15)', transformOrigin: 'center' }}
             />
           </button>
 

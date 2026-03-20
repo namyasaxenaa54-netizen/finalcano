@@ -49,13 +49,13 @@ const LightThemeHero = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-20">
         {/* Hero Header */}
         <div className="text-center mb-20 pt-32">
-          {/* Logo - Final transparent version, 20% larger */}
+          {/* Logo - Final transparent version, perfectly sized */}
           <div className="mb-12 animate-fade-in">
             <img 
               src="/logo-transparent.png"
               alt="CanoCrystal"
-              className="h-44 md:h-52 lg:h-64 w-auto mx-auto drop-shadow-2xl"
-              style={{ transform: 'scale(1.3)', transformOrigin: 'center' }}
+              className="h-40 md:h-48 lg:h-56 w-auto mx-auto drop-shadow-2xl"
+              style={{ transform: 'scale(1.15)', transformOrigin: 'center' }}
             />
           </div>
 
