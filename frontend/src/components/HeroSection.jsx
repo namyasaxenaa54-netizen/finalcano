@@ -55,7 +55,7 @@ const LightThemeHero = () => {
               src="/logo-transparent.png"
               alt="CanoCrystal"
               className="h-40 md:h-48 lg:h-56 w-auto mx-auto drop-shadow-2xl"
-              style={{ transform: 'scale(1.15)', transformOrigin: 'center' }}
+              style={{ transform: 'scale(0.92)', transformOrigin: 'center' }}
             />
           </div>
 

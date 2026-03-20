@@ -59,7 +59,7 @@ const Header = () => {
               src="/logo-transparent.png"
               alt="CanoCrystal - Return to Home"
               className="h-16 sm:h-18 md:h-20 w-auto"
-              style={{ transform: 'scale(1.15)', transformOrigin: 'center' }}
+              style={{ transform: 'scale(0.92)', transformOrigin: 'center' }}
             />
           </button>
 
