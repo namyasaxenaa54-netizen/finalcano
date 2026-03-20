@@ -49,16 +49,16 @@ const Header = () => {
       {/* Main header */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
         <div className="flex items-center justify-between gap-4">
-          {/* Logo - Clickable Home Button */}
+          {/* Logo - Final transparent version, increased size */}
           <button 
             onClick={() => navigate('/')}
             className="flex items-center flex-shrink-0 hover:opacity-80 transition-opacity cursor-pointer"
             aria-label="Return to homepage"
           >
             <img
-              src="https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/lrvcnut7_Screenshot%202026-03-14%20at%203.14.05%E2%80%AFPM.png"
+              src="https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/kewlvn2b_erasebg-transformed.png"
               alt="CanoCrystal - Return to Home"
-              className="h-10 sm:h-12 w-auto"
+              className="h-16 sm:h-20 md:h-24 w-auto"
             />
           </button>
 

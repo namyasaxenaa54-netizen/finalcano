@@ -30,10 +30,10 @@ const SleekLoader = ({ onComplete }) => {
     <div className="fixed inset-0 z-50 bg-gradient-to-br from-white via-[#FAF9F6] to-[#FFF5EE] flex items-center justify-center">
       {/* Main logo with smooth animation */}
       <div className="relative flex flex-col items-center">
-        {/* Logo - High quality */}
+        {/* Logo - Final transparent version */}
         <div className="animate-logo-entrance">
           <img 
-            src="https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/r8rd43w6_web%20logo_page-0001.jpg"
+            src="https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/kewlvn2b_erasebg-transformed.png"
             alt="CanoCrystal"
             className="w-96 h-auto"
           />
