@@ -2,10 +2,10 @@ import React, { useState, useEffect, lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import SleekLoader from './components/Loader';
-import SEO from './components/SEO';
 import ErrorBoundary from './components/ErrorBoundary';
+import { Toaster } from './components/ui/sonner';
 
-// Lazy load pages for better performance
+// Lazy components
 const Header = lazy(() => import('./components/Header'));
 const LightThemeHero = lazy(() => import('./components/HeroSection'));
 const ProductsShowcase = lazy(() => import('./components/ProductsShowcase'));
@@ -14,16 +14,17 @@ const TechnologySection = lazy(() => import('./components/TechnologySection'));
 const IndustriesSection = lazy(() => import('./components/IndustriesSection'));
 const ContactSection = lazy(() => import('./components/ContactSection'));
 const Footer = lazy(() => import('./components/Footer'));
+
 const CanoBondPage = lazy(() => import('./pages/CanoBondPage'));
 const BlackberryPage = lazy(() => import('./pages/BlackberryPage'));
 const FurniturePage = lazy(() => import('./pages/FurniturePage'));
 const AboutPage = lazy(() => import('./pages/AboutPage'));
 const ContactPage = lazy(() => import('./pages/ContactPage'));
 const DistributorsPage = lazy(() => import('./pages/DistributorsPage'));
-const SocialMediaFloat = lazy(() => import('./components/SocialMediaFloat'));
-import { Toaster } from './components/ui/sonner';
 
-// Admin imports (not lazy loaded for security)
+const SocialMediaFloat = lazy(() => import('./components/SocialMediaFloat'));
+
+// Admin
 import { AuthProvider } from './admin/context/AuthContext';
 import ProtectedRoute from './admin/components/ProtectedRoute';
 import AdminLogin from './admin/pages/AdminLogin';
@@ -53,11 +54,6 @@ function HomePage() {
 function App() {
   const [loading, setLoading] = useState(true);
 
-  const handleLoadingComplete = () => {
-    setLoading(false);
-  };
-
-  // Smooth scroll behavior
   useEffect(() => {
     document.documentElement.style.scrollBehavior = 'smooth';
     return () => {
@@ -69,13 +65,14 @@ function App() {
     <ErrorBoundary>
       <AuthProvider>
         <div className="App">
-          {loading && <SleekLoader onComplete={handleLoadingComplete} />}
-          
+
+          {loading && <SleekLoader onComplete={() => setLoading(false)} />}
+
           {!loading && (
-            <>
-              <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="text-xl">Loading...</div></div>}>
-                <Routes>
-                {/* Public Routes */}
+            <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading...</div>}>
+
+              <Routes>
+                {/* Public */}
                 <Route path="/" element={<HomePage />} />
                 <Route path="/canobond" element={<CanoBondPage />} />
                 <Route path="/blackberry" element={<BlackberryPage />} />
@@ -84,7 +81,7 @@ function App() {
                 <Route path="/contact" element={<ContactPage />} />
                 <Route path="/distributors" element={<DistributorsPage />} />
 
-                {/* Admin Routes */}
+                {/* Admin */}
                 <Route path="/admin/login" element={<AdminLogin />} />
                 <Route
                   path="/admin"
@@ -100,13 +97,14 @@ function App() {
                   <Route path="company" element={<CompanyManager />} />
                 </Route>
               </Routes>
+
               <SocialMediaFloat />
+              <Toaster />
+
             </Suspense>
-            <Toaster />
-          </>
-        )}
-      </div>
-    </AuthProvider>
+          )}
+        </div>
+      </AuthProvider>
     </ErrorBoundary>
   );
 }
