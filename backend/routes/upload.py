@@ -7,7 +7,7 @@ from datetime import datetime
 router = APIRouter(prefix="/upload", tags=["Upload"])
 
 # Create uploads directory
-UPLOAD_DIR = Path("/app/frontend/public/uploads")
+UPLOAD_DIR = Path("uploads")
 UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
 
 @router.post("/image")
