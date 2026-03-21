@@ -7,7 +7,8 @@ import os
 
 router = APIRouter(prefix="/auth", tags=["Authentication"])
 
-# Get DB connection
+
+# 🔌 DB CONNECTION
 def get_db():
     mongo_url = os.environ['MONGO_URL']
     client = AsyncIOMotorClient(mongo_url)
@@ -15,32 +16,11 @@ def get_db():
     return db, client
 
 
-# 🔥 AUTO CREATE DEFAULT ADMIN
-async def create_default_admin():
-    db, client = get_db()
-    try:
-        existing = await db.admin_users.find_one({"username": "admin"})
-        if not existing:
-            admin_user = {
-                "username": "admin",
-                "email": "admin@gmail.com",
-                "hashed_password": get_password_hash("admin123"),
-                "created_at": "2026-01-01"
-            }
-            await db.admin_users.insert_one(admin_user)
-            print("✅ Default admin created: admin / admin123")
-    finally:
-        client.close()
-
-
-@router.on_event("startup")
-async def startup_event():
-    await create_default_admin()
-
-
+# 📝 REGISTER ADMIN
 @router.post("/register", response_model=AdminUser)
 async def register_admin(user: AdminUserCreate):
     db, client = get_db()
+
     try:
         existing_user = await db.admin_users.find_one(
             {"$or": [{"username": user.username}, {"email": user.email}]},
@@ -69,10 +49,24 @@ async def register_admin(user: AdminUserCreate):
         client.close()
 
 
+# 🔐 LOGIN (AUTO CREATES DEFAULT ADMIN)
 @router.post("/login", response_model=Token)
 async def login(user_data: AdminUserLogin):
     db, client = get_db()
+
     try:
+        # 🔥 CREATE DEFAULT ADMIN IF NOT EXISTS
+        existing = await db.admin_users.find_one({"username": "admin"})
+        if not existing:
+            await db.admin_users.insert_one({
+                "username": "admin",
+                "email": "admin@gmail.com",
+                "hashed_password": get_password_hash("admin123"),
+                "created_at": "2026-01-01"
+            })
+            print("✅ Default admin created: admin / admin123")
+
+        # 🔍 FIND USER
         user = await db.admin_users.find_one(
             {"username": user_data.username},
             {"_id": 0}
@@ -84,18 +78,23 @@ async def login(user_data: AdminUserLogin):
                 detail="Incorrect username or password"
             )
 
+        # 🔑 VERIFY PASSWORD
         if not verify_password(user_data.password, user["hashed_password"]):
             raise HTTPException(
                 status_code=401,
                 detail="Incorrect username or password"
             )
 
+        # 🎟️ CREATE TOKEN
         access_token = create_access_token(
             data={"sub": user["username"]},
             expires_delta=timedelta(minutes=1440)
         )
 
-        return {"access_token": access_token, "token_type": "bearer"}
+        return {
+            "access_token": access_token,
+            "token_type": "bearer"
+        }
 
     finally:
         client.close()
