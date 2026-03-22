@@ -1,122 +1,141 @@
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
-import { Button } from './ui/button';
 import { brandInfo } from '../mockData';
 
 const BrandsEcosystem = () => {
   const brands = [
     {
       ...brandInfo.canoBond,
-      color: '#C9A0A0',
-      gradient: 'from-[#C9A0A0]/20 to-[#B76E79]/20',
-      borderColor: 'border-[#C9A0A0]/30',
-      textColor: 'text-[#2C2C2C]',
+      color: '#E07B39',
+      gradient: 'from-[#FFF5EB] via-white to-[#FFF5EB]',
+      accentColor: '#E07B39',
+      icon: '🏗️',
       image: 'https://images.unsplash.com/photo-1703868669362-562283170216?crop=entropy&cs=srgb&fm=jpg&q=85'
     },
     {
       ...brandInfo.blackberry,
-      color: '#8B7E8B',
-      gradient: 'from-[#8B7E8B]/20 to-[#A68A7A]/20',
-      borderColor: 'border-[#8B7E8B]/30',
-      textColor: 'text-[#2C2C2C]',
+      color: '#8E44AD',
+      gradient: 'from-[#F4ECF7] via-white to-[#F4ECF7]',
+      accentColor: '#8E44AD',
+      icon: '⚗️',
       image: 'https://images.unsplash.com/photo-1598056036946-3cfa8493bfdf?crop=entropy&cs=srgb&fm=jpg&q=85'
     },
     {
-      ...brandInfo.furniture,
-      color: '#A68A7A',
-      gradient: 'from-[#A68A7A]/20 to-[#8B7E8B]/20',
-      borderColor: 'border-[#A68A7A]/30',
-      textColor: 'text-[#2C2C2C]',
-      image: 'https://images.unsplash.com/photo-1724582586529-62622e50c0b3?crop=entropy&cs=srgb&fm=jpg&q=85'
+      ...brandInfo.qurotuff,
+      color: '#2C5F2D',
+      gradient: 'from-[#E8F5E9] via-white to-[#E8F5E9]',
+      accentColor: '#2C5F2D',
+      icon: '🌲',
+      image: 'https://images.unsplash.com/photo-1626958390085-c9e945a7f0c4?crop=entropy&cs=srgb&fm=jpg&q=85'
     }
   ];
 
   return (
-    <section id="brands" className="py-16 sm:py-24 relative overflow-hidden">
-      {/* Marble texture background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#FAF9F6] via-white to-[#FFFEF7]">
+    <section id="brands" className="py-20 sm:py-32 relative overflow-hidden bg-gradient-to-b from-[#FDFBF7] via-white to-[#FDFBF7]">
+      {/* Subtle pattern overlay */}
+      <div className="absolute inset-0 opacity-[0.015]">
         <div 
-          className="absolute inset-0 opacity-8"
+          className="absolute inset-0"
           style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1551554781-c46200ea959d)',
-            backgroundSize: '500px 500px',
-            backgroundRepeat: 'repeat'
+            backgroundImage: 'radial-gradient(circle, #000 1px, transparent 1px)',
+            backgroundSize: '40px 40px'
           }}
         />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
-        {/* Header */}
-        <div className="text-center mb-12 sm:mb-20">
-          <div className="inline-block mb-4">
-            <span className="text-sm font-semibold text-[#B76E79] bg-[#B76E79]/10 px-4 py-2 rounded-full">
-              Our Ecosystem
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header - More Premium */}
+        <div className="text-center mb-16 sm:mb-24">
+          <div className="inline-block mb-6">
+            <span className="text-sm font-bold tracking-widest text-gray-500 uppercase bg-gradient-to-r from-gray-100 to-gray-50 px-6 py-3 rounded-full border border-gray-200 shadow-sm">
+              Our Portfolio
             </span>
           </div>
           
-          <h2 className="text-4xl sm:text-5xl font-bold text-[#2C2C2C] mb-4">
-            One Crystal. Three Powerful Brands.
+          <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 tracking-tight">
+            One Crystal.<br />
+            <span className="bg-gradient-to-r from-orange-600 via-purple-600 to-green-600 bg-clip-text text-transparent">
+              Three Powerful Brands.
+            </span>
           </h2>
-          <p className="text-lg sm:text-xl text-[#3A3A3A] max-w-2xl mx-auto">
-            United by innovation, specialized for excellence across construction and living spaces
+          <p className="text-xl sm:text-2xl text-gray-600 max-w-3xl mx-auto font-light leading-relaxed">
+            United by innovation, specialized for excellence across construction, adhesives, and premium plywood
           </p>
         </div>
 
-        {/* Brand Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+        {/* Brand Cards - Premium Design */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
           {brands.map((brand, index) => (
             <div
               key={brand.name}
-              className="group cursor-pointer"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className="group"
+              style={{ animationDelay: `${index * 0.15}s` }}
             >
-              <div className={`relative h-full bg-gradient-to-br ${brand.gradient} backdrop-blur-sm border-2 ${brand.borderColor} rounded-3xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 overflow-hidden`}>
-                {/* Background image with overlay */}
-                <div className="absolute inset-0 opacity-20">
-                  <img
-                    src={brand.image}
-                    alt={brand.name}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+              <div className={`relative h-full bg-gradient-to-br ${brand.gradient} rounded-3xl p-8 sm:p-10 shadow-xl hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 overflow-hidden border border-gray-100`}>
+                {/* Decorative corner element */}
+                <div 
+                  className="absolute top-0 right-0 w-32 h-32 opacity-10 blur-3xl transition-all duration-700 group-hover:scale-150"
+                  style={{ backgroundColor: brand.color }}
+                />
 
                 {/* Content */}
-                <div className="relative z-10">
-                  {/* Brand color indicator */}
-                  <div
-                    className="w-12 h-1 rounded-full mb-6"
-                    style={{ backgroundColor: brand.color }}
-                  />
+                <div className="relative z-10 flex flex-col h-full">
+                  {/* Icon Badge */}
+                  <div 
+                    className="w-20 h-20 rounded-2xl flex items-center justify-center text-4xl mb-6 shadow-lg transition-transform duration-500 group-hover:scale-110"
+                    style={{ 
+                      backgroundColor: `${brand.color}15`,
+                      border: `2px solid ${brand.color}30`
+                    }}
+                  >
+                    {brand.icon}
+                  </div>
 
-                  <h3 className={`text-2xl sm:text-3xl font-bold mb-3 ${brand.textColor}`}>
+                  {/* Brand Name */}
+                  <h3 
+                    className="text-3xl sm:text-4xl font-bold mb-3 transition-colors duration-300"
+                    style={{ color: brand.color }}
+                  >
                     {brand.name}
                   </h3>
                   
-                  <p className="text-base sm:text-lg font-semibold text-[#3A3A3A] mb-4">
+                  {/* Tagline */}
+                  <p className="text-lg sm:text-xl font-semibold text-gray-700 mb-4">
                     {brand.tagline}
                   </p>
                   
-                  <p className="text-[#3A3A3A] mb-6 leading-relaxed text-sm sm:text-base">
+                  {/* Accent line */}
+                  <div 
+                    className="w-16 h-1 rounded-full mb-6 transition-all duration-500 group-hover:w-24"
+                    style={{ backgroundColor: brand.color }}
+                  />
+                  
+                  {/* Description */}
+                  <p className="text-gray-600 leading-relaxed text-base sm:text-lg font-light flex-grow">
                     {brand.description}
                   </p>
 
-                  <Button
-                    className="w-full justify-between rounded-full text-white shadow-md hover:shadow-lg transition-all duration-300"
-                    style={{ backgroundColor: brand.color }}
-                  >
-                    Explore {brand.name}
-                    <ArrowRight size={18} />
-                  </Button>
+                  {/* Subtle bottom accent */}
+                  <div className="mt-8 pt-6 border-t border-gray-200">
+                    <div className="flex items-center justify-between text-sm text-gray-500">
+                      <span className="font-medium">Premium Quality</span>
+                      <div className="flex space-x-1">
+                        <div className="w-2 h-2 rounded-full" style={{ backgroundColor: brand.color }} />
+                        <div className="w-2 h-2 rounded-full bg-gray-300" />
+                        <div className="w-2 h-2 rounded-full bg-gray-300" />
+                      </div>
+                    </div>
+                  </div>
                 </div>
-
-                {/* Decorative element */}
-                <div
-                  className="absolute -bottom-8 -right-8 w-32 h-32 rounded-full opacity-20 blur-2xl"
-                  style={{ backgroundColor: brand.color }}
-                />
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Bottom tagline */}
+        <div className="text-center mt-20">
+          <p className="text-gray-500 text-lg font-light italic">
+            Each brand, a testament to quality. Together, an unbeatable portfolio.
+          </p>
         </div>
       </div>
     </section>
