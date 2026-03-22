@@ -76,15 +76,15 @@ async def seed_production_database():
                 "banner_image": "https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/7d6mkjxi_Screenshot%202026-03-16%20at%203.59.46%E2%80%AFPM.png"
             },
             {
-                "id": "furniture",
-                "slug": "furniture",
-                "name": "Furniture Collection",
-                "tagline": "Elegance Meets Functionality",
-                "description": "Premium furniture solutions combining aesthetic beauty with practical design.",
+                "id": "qurotuff",
+                "slug": "qurotuff",
+                "name": "Quro Tuff",
+                "tagline": "Premium Plywood Solutions",
+                "description": "High-quality plywood products combining strength, durability, and elegant finishes for all construction and interior needs.",
                 "brand_color": "#2C5F2D",
                 "light_color": "#E8F5E9",
-                "logo": "",
-                "banner_image": "https://images.unsplash.com/photo-1628744876497-eb30460be9f6"
+                "logo": "https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/tqz8b54t_image.png",
+                "banner_image": "https://images.unsplash.com/photo-1626958390085-c9e945a7f0c4"
             }
         ]
         
@@ -378,54 +378,54 @@ async def seed_production_database():
             )
         print(f"✅ Seeded {len(blackberry_products)} Blackberry products")
         
-        # Seed Furniture Products
-        print("\n📦 Seeding Furniture products...")
-        furniture_products = [
+        # Seed Quro Tuff Products
+        print("\n📦 Seeding Quro Tuff products...")
+        qurotuff_products = [
             {
-                "id": "furn-sofa",
-                "name": "Modern Sectional Sofa",
-                "brand": "furniture",
-                "category": "Seating",
-                "section": "living",
-                "description": "Contemporary L-shaped sectional sofa with premium upholstery",
-                "image": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc",
-                "specs": {"dimensions": "280x180x85cm", "material": "Fabric"},
-                "features": ["Premium fabric", "Modular design", "Easy assembly"],
-                "applications": ["Living room", "Lounge areas"]
+                "id": "qt-plywood1",
+                "name": "Premium Commercial Plywood",
+                "brand": "qurotuff",
+                "category": "Commercial Plywood",
+                "section": "plywood",
+                "description": "High-grade commercial plywood for interior and furniture applications",
+                "image": "https://images.unsplash.com/photo-1626958390085-c9e945a7f0c4",
+                "specs": {"thickness": "6mm - 25mm", "grade": "BWR/BWP", "size": "8x4 feet"},
+                "features": ["Borer & termite proof", "High strength", "Smooth finish"],
+                "applications": ["Furniture", "Interior paneling", "Partitions"]
             },
             {
-                "id": "furn-chair",
-                "name": "Designer Chair",
-                "brand": "furniture",
-                "category": "Seating",
-                "section": "living",
-                "description": "Modern ergonomic chair with elegant design",
-                "image": "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c",
-                "specs": {"dimensions": "60x70x90cm", "material": "Leather"},
-                "features": ["Ergonomic", "Stylish", "Comfortable"],
-                "applications": ["Dining", "Office", "Living room"]
+                "id": "qt-plywood2",
+                "name": "Decorative Laminated Plywood",
+                "brand": "qurotuff",
+                "category": "Decorative",
+                "section": "decorative",
+                "description": "Premium decorative plywood with elegant finishes",
+                "image": "https://images.unsplash.com/photo-1631889993959-41b4e9c6e3c5",
+                "specs": {"thickness": "6mm - 18mm", "finish": "Multiple designs", "size": "8x4 feet"},
+                "features": ["Designer finishes", "Scratch resistant", "Easy maintenance"],
+                "applications": ["Wardrobes", "Kitchen cabinets", "Wall paneling"]
             },
             {
-                "id": "furn-table",
-                "name": "Dining Table",
-                "brand": "furniture",
-                "category": "Tables",
-                "section": "dining",
-                "description": "Elegant wooden dining table for modern homes",
-                "image": "https://images.unsplash.com/photo-1617806118233-18e1de247200",
-                "specs": {"dimensions": "180x90x75cm", "material": "Solid wood"},
-                "features": ["Solid construction", "Natural finish", "Seats 6-8"],
-                "applications": ["Dining room", "Kitchen"]
+                "id": "qt-plywood3",
+                "name": "Marine Grade Plywood",
+                "brand": "qurotuff",
+                "category": "Specialty",
+                "section": "specialty",
+                "description": "Water-resistant plywood for high-moisture areas",
+                "image": "https://images.unsplash.com/photo-1615971677499-5467cbab01c0",
+                "specs": {"thickness": "12mm - 25mm", "grade": "BWP", "size": "8x4 feet"},
+                "features": ["100% waterproof", "Superior bonding", "Long-lasting"],
+                "applications": ["Bathrooms", "Kitchens", "Outdoor furniture"]
             }
         ]
         
-        for product in furniture_products:
+        for product in qurotuff_products:
             await db.products.update_one(
                 {"id": product["id"]},
                 {"$set": product},
                 upsert=True
             )
-        print(f"✅ Seeded {len(furniture_products)} Furniture products")
+        print(f"✅ Seeded {len(qurotuff_products)} Quro Tuff products")
         
         # Seed Company Info
         print("\n📦 Seeding company information...")
@@ -473,13 +473,13 @@ async def seed_production_database():
         # Count by brand
         canobond_count = await db.products.count_documents({"brand": "canobond"})
         blackberry_count = await db.products.count_documents({"brand": "blackberry"})
-        furniture_count = await db.products.count_documents({"brand": "furniture"})
+        qurotuff_count = await db.products.count_documents({"brand": "qurotuff"})
         
         print(f"\n📊 Final Database State:")
         print(f"   Total Products: {final_products}")
         print(f"     - CanoBond: {canobond_count} products")
         print(f"     - Blackberry: {blackberry_count} products")
-        print(f"     - Furniture: {furniture_count} products")
+        print(f"     - Quro Tuff: {qurotuff_count} products")
         print(f"   Total Brands: {final_brands}")
         print(f"   Admin Users: {final_users}")
         

@@ -16,7 +16,7 @@ const ContactSection = lazy(() => import('./components/ContactSection'));
 const Footer = lazy(() => import('./components/Footer'));
 const CanoBondPage = lazy(() => import('./pages/CanoBondPage'));
 const BlackberryPage = lazy(() => import('./pages/BlackberryPage'));
-const FurniturePage = lazy(() => import('./pages/FurniturePage'));
+const QuroTuffPage = lazy(() => import('./pages/QuroTuffPage'));
 const AboutPage = lazy(() => import('./pages/AboutPage'));
 const ContactPage = lazy(() => import('./pages/ContactPage'));
 const DistributorsPage = lazy(() => import('./pages/DistributorsPage'));
@@ -79,7 +79,8 @@ function App() {
                 <Route path="/" element={<HomePage />} />
                 <Route path="/canobond" element={<CanoBondPage />} />
                 <Route path="/blackberry" element={<BlackberryPage />} />
-                <Route path="/furniture" element={<FurniturePage />} />
+                <Route path="/qurotuff" element={<QuroTuffPage />} />
+                <Route path="/furniture" element={<QuroTuffPage />} />
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/contact" element={<ContactPage />} />
                 <Route path="/distributors" element={<DistributorsPage />} />

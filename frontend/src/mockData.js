@@ -502,12 +502,12 @@ export const brandInfo = {
     color: '#8B7E8B',
     image: 'https://images.unsplash.com/photo-1560251085-d9c1dc542960?crop=entropy&cs=srgb&fm=jpg&q=85'
   },
-  furniture: {
-    name: 'Furniture Collection',
-    tagline: 'Luxury Living Solutions',
-    description: 'Contemporary furniture designed for modern living with elegance and comfort',
-    color: '#A68A7A',
-    image: 'https://images.unsplash.com/photo-1724582586529-62622e50c0b3?crop=entropy&cs=srgb&fm=jpg&q=85'
+  qurotuff: {
+    name: 'Quro Tuff',
+    tagline: 'Premium Plywood Solutions',
+    description: 'High-quality plywood products combining strength, durability, and elegant finishes for all construction needs',
+    color: '#2C5F2D',
+    image: 'https://images.unsplash.com/photo-1626958390085-c9e945a7f0c4?crop=entropy&cs=srgb&fm=jpg&q=85'
   }
 };
 

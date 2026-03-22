@@ -27,14 +27,15 @@ const LightThemeHero = () => {
       logo: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/ivdpxzwa_Screenshot%202026-03-17%20at%205.35.40%E2%80%AFPM.png'
     },
     {
-      id: 'furniture',
-      name: 'Furniture',
-      tagline: 'Luxury Living',
-      subtitle: 'Contemporary Collection',
-      color: '#7D6608',
-      lightColor: '#FFF9E6',
-      image: 'https://images.unsplash.com/photo-1628744876497-eb30460be9f6',
-      icon: '🪑'
+      id: 'qurotuff',
+      name: 'Quro Tuff',
+      tagline: 'Premium Plywood',
+      subtitle: 'Strength & Elegance Combined',
+      color: '#2C5F2D',
+      lightColor: '#E8F5E9',
+      image: 'https://images.unsplash.com/photo-1626958390085-c9e945a7f0c4',
+      logo: '/qurotuff-logo.png',
+      icon: '🌲'
     }
   ];
 
