@@ -199,56 +199,296 @@ const BrandPageTemplate = ({ brandData, products = [] }) => {
 
         {/* SECTION 1: TILE ADHESIVES */}
         {productsBySection.adhesives && productsBySection.adhesives.length > 0 && (
-          <section className="mb-12 md:mb-20">
-            <div className="text-center mb-8 md:mb-12">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 md:mb-4 px-4">
-                {sections?.adhesives?.title || 'Tile Adhesives'}
-              </h2>
-              <div className="w-16 sm:w-20 md:w-24 h-1 rounded-full mx-auto" style={{ backgroundColor: brandColor }} />
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
-              {productsBySection.adhesives.map((product) => (
-                <ProductCard key={product.id} product={product} />
-              ))}
+          <section className="mb-16 md:mb-24 relative">
+            {/* Premium Background */}
+            <div className="absolute inset-0 rounded-3xl opacity-30" 
+              style={{ 
+                background: `linear-gradient(135deg, ${brandColor}08 0%, ${brandColor}02 50%, transparent 100%)` 
+              }}
+            />
+            
+            <div className="relative py-12 md:py-16">
+              <div className="text-center mb-10 md:mb-14">
+                <div className="inline-block mb-4">
+                  <span 
+                    className="text-xs md:text-sm font-bold tracking-widest uppercase px-4 md:px-6 py-2 md:py-3 rounded-full shadow-sm"
+                    style={{ 
+                      backgroundColor: `${brandColor}15`,
+                      color: brandColor,
+                      border: `1px solid ${brandColor}30`
+                    }}
+                  >
+                    Professional Grade
+                  </span>
+                </div>
+                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 px-4"
+                  style={{ 
+                    background: `linear-gradient(135deg, ${brandColor} 0%, ${brandColor}cc 100%)`,
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    backgroundClip: 'text'
+                  }}
+                >
+                  {sections?.adhesives?.title || 'Tile Adhesives'}
+                </h2>
+                <div className="w-20 sm:w-24 md:w-32 h-1.5 rounded-full mx-auto shadow-lg" 
+                  style={{ backgroundColor: brandColor }} 
+                />
+                <p className="text-gray-600 text-base md:text-lg mt-4 max-w-2xl mx-auto px-4">
+                  Premium bonding solutions engineered for excellence
+                </p>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
+                {productsBySection.adhesives.map((product) => (
+                  <ProductCard key={product.id} product={product} />
+                ))}
+              </div>
             </div>
           </section>
         )}
 
         {/* SECTION 2: GROUTS & SOLUTIONS */}
         {productsBySection.grouts && productsBySection.grouts.length > 0 && (
-          <section className="mb-12 md:mb-20">
-            <div className="text-center mb-8 md:mb-12">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 md:mb-4 px-4">
-                {sections?.grouts?.title || 'Grouts & Solutions'}
-              </h2>
-              <div className="w-16 sm:w-20 md:w-24 h-1 rounded-full mx-auto" style={{ backgroundColor: brandColor }} />
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-12 md:mb-16">
-              {productsBySection.grouts.map((product) => (
-                <ProductCard key={product.id} product={product} />
-              ))}
-            </div>
+          <section className="mb-16 md:mb-24 relative">
+            {/* Premium Background - Different gradient */}
+            <div className="absolute inset-0 rounded-3xl opacity-30" 
+              style={{ 
+                background: `linear-gradient(-135deg, ${brandColor}08 0%, ${brandColor}02 50%, transparent 100%)` 
+              }}
+            />
             
-            {/* Color Picker Integration */}
-            <div className="mt-12 md:mt-16">
-              <ColorPicker onColorSelect={(color) => console.log('Selected color:', color)} />
+            <div className="relative py-12 md:py-16">
+              <div className="text-center mb-10 md:mb-14">
+                <div className="inline-block mb-4">
+                  <span 
+                    className="text-xs md:text-sm font-bold tracking-widest uppercase px-4 md:px-6 py-2 md:py-3 rounded-full shadow-sm"
+                    style={{ 
+                      backgroundColor: `${brandColor}15`,
+                      color: brandColor,
+                      border: `1px solid ${brandColor}30`
+                    }}
+                  >
+                    Premium Finishes
+                  </span>
+                </div>
+                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 px-4"
+                  style={{ 
+                    background: `linear-gradient(135deg, ${brandColor} 0%, ${brandColor}cc 100%)`,
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    backgroundClip: 'text'
+                  }}
+                >
+                  {sections?.grouts?.title || 'Grouts & Solutions'}
+                </h2>
+                <div className="w-20 sm:w-24 md:w-32 h-1.5 rounded-full mx-auto shadow-lg" 
+                  style={{ backgroundColor: brandColor }} 
+                />
+                <p className="text-gray-600 text-base md:text-lg mt-4 max-w-2xl mx-auto px-4">
+                  Superior grouting systems for lasting perfection
+                </p>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
+                {productsBySection.grouts.map((product) => (
+                  <ProductCard key={product.id} product={product} />
+                ))}
+              </div>
             </div>
           </section>
         )}
 
-        {/* SECTION 3: CLEANING SOLUTIONS */}
+        {/* SECTION 3: CLEANING SOLUTIONS / PLYWOOD / SPECIALTY */}
         {productsBySection.cleaning && productsBySection.cleaning.length > 0 && (
-          <section className="mb-12 md:mb-20">
-            <div className="text-center mb-8 md:mb-12">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 md:mb-4 px-4">
-                {sections?.cleaning?.title || 'Cleaning Solutions'}
-              </h2>
-              <div className="w-16 sm:w-20 md:w-24 h-1 rounded-full mx-auto" style={{ backgroundColor: brandColor }} />
+          <section className="mb-16 md:mb-24 relative">
+            <div className="absolute inset-0 rounded-3xl opacity-30" 
+              style={{ 
+                background: `radial-gradient(circle at top right, ${brandColor}08, transparent 70%)` 
+              }}
+            />
+            
+            <div className="relative py-12 md:py-16">
+              <div className="text-center mb-10 md:mb-14">
+                <div className="inline-block mb-4">
+                  <span 
+                    className="text-xs md:text-sm font-bold tracking-widest uppercase px-4 md:px-6 py-2 md:py-3 rounded-full shadow-sm"
+                    style={{ 
+                      backgroundColor: `${brandColor}15`,
+                      color: brandColor,
+                      border: `1px solid ${brandColor}30`
+                    }}
+                  >
+                    Maintenance Excellence
+                  </span>
+                </div>
+                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 px-4"
+                  style={{ 
+                    background: `linear-gradient(135deg, ${brandColor} 0%, ${brandColor}cc 100%)`,
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    backgroundClip: 'text'
+                  }}
+                >
+                  {sections?.cleaning?.title || 'Cleaning Solutions'}
+                </h2>
+                <div className="w-20 sm:w-24 md:w-32 h-1.5 rounded-full mx-auto shadow-lg" 
+                  style={{ backgroundColor: brandColor }} 
+                />
+                <p className="text-gray-600 text-base md:text-lg mt-4 max-w-2xl mx-auto px-4">
+                  Professional care for enduring beauty
+                </p>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
+                {productsBySection.cleaning.map((product) => (
+                  <ProductCard key={product.id} product={product} />
+                ))}
+              </div>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
-              {productsBySection.cleaning.map((product) => (
-                <ProductCard key={product.id} product={product} />
-              ))}
+          </section>
+        )}
+        
+        {/* SECTION: PLYWOOD PRODUCTS (for Quro Tuff) */}
+        {productsBySection.plywood && productsBySection.plywood.length > 0 && (
+          <section className="mb-16 md:mb-24 relative">
+            <div className="absolute inset-0 rounded-3xl opacity-30" 
+              style={{ 
+                background: `linear-gradient(135deg, ${brandColor}08 0%, ${brandColor}02 50%, transparent 100%)` 
+              }}
+            />
+            
+            <div className="relative py-12 md:py-16">
+              <div className="text-center mb-10 md:mb-14">
+                <div className="inline-block mb-4">
+                  <span 
+                    className="text-xs md:text-sm font-bold tracking-widest uppercase px-4 md:px-6 py-2 md:py-3 rounded-full shadow-sm"
+                    style={{ 
+                      backgroundColor: `${brandColor}15`,
+                      color: brandColor,
+                      border: `1px solid ${brandColor}30`
+                    }}
+                  >
+                    Standard Range
+                  </span>
+                </div>
+                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 px-4"
+                  style={{ 
+                    background: `linear-gradient(135deg, ${brandColor} 0%, ${brandColor}cc 100%)`,
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    backgroundClip: 'text'
+                  }}
+                >
+                  {sections?.plywood?.title || 'Plywood Products'}
+                </h2>
+                <div className="w-20 sm:w-24 md:w-32 h-1.5 rounded-full mx-auto shadow-lg" 
+                  style={{ backgroundColor: brandColor }} 
+                />
+                <p className="text-gray-600 text-base md:text-lg mt-4 max-w-2xl mx-auto px-4">
+                  Premium quality plywood for every application
+                </p>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
+                {productsBySection.plywood.map((product) => (
+                  <ProductCard key={product.id} product={product} />
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+        
+        {/* SECTION: DECORATIVE / SPECIALTY */}
+        {(productsBySection.decorative && productsBySection.decorative.length > 0) && (
+          <section className="mb-16 md:mb-24 relative">
+            <div className="absolute inset-0 rounded-3xl opacity-30" 
+              style={{ 
+                background: `linear-gradient(-135deg, ${brandColor}08 0%, ${brandColor}02 50%, transparent 100%)` 
+              }}
+            />
+            
+            <div className="relative py-12 md:py-16">
+              <div className="text-center mb-10 md:mb-14">
+                <div className="inline-block mb-4">
+                  <span 
+                    className="text-xs md:text-sm font-bold tracking-widest uppercase px-4 md:px-6 py-2 md:py-3 rounded-full shadow-sm"
+                    style={{ 
+                      backgroundColor: `${brandColor}15`,
+                      color: brandColor,
+                      border: `1px solid ${brandColor}30`
+                    }}
+                  >
+                    Designer Collection
+                  </span>
+                </div>
+                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 px-4"
+                  style={{ 
+                    background: `linear-gradient(135deg, ${brandColor} 0%, ${brandColor}cc 100%)`,
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    backgroundClip: 'text'
+                  }}
+                >
+                  {sections?.decorative?.title || 'Decorative Plywood'}
+                </h2>
+                <div className="w-20 sm:w-24 md:w-32 h-1.5 rounded-full mx-auto shadow-lg" 
+                  style={{ backgroundColor: brandColor }} 
+                />
+                <p className="text-gray-600 text-base md:text-lg mt-4 max-w-2xl mx-auto px-4">
+                  Elegant finishes for sophisticated interiors
+                </p>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
+                {productsBySection.decorative.map((product) => (
+                  <ProductCard key={product.id} product={product} />
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+        
+        {/* SECTION: SPECIALTY PRODUCTS */}
+        {productsBySection.specialty && productsBySection.specialty.length > 0 && (
+          <section className="mb-16 md:mb-24 relative">
+            <div className="absolute inset-0 rounded-3xl opacity-30" 
+              style={{ 
+                background: `radial-gradient(circle at bottom left, ${brandColor}08, transparent 70%)` 
+              }}
+            />
+            
+            <div className="relative py-12 md:py-16">
+              <div className="text-center mb-10 md:mb-14">
+                <div className="inline-block mb-4">
+                  <span 
+                    className="text-xs md:text-sm font-bold tracking-widest uppercase px-4 md:px-6 py-2 md:py-3 rounded-full shadow-sm"
+                    style={{ 
+                      backgroundColor: `${brandColor}15`,
+                      color: brandColor,
+                      border: `1px solid ${brandColor}30`
+                    }}
+                  >
+                    Specialized Solutions
+                  </span>
+                </div>
+                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 px-4"
+                  style={{ 
+                    background: `linear-gradient(135deg, ${brandColor} 0%, ${brandColor}cc 100%)`,
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    backgroundClip: 'text'
+                  }}
+                >
+                  {sections?.specialty?.title || 'Specialty Products'}
+                </h2>
+                <div className="w-20 sm:w-24 md:w-32 h-1.5 rounded-full mx-auto shadow-lg" 
+                  style={{ backgroundColor: brandColor }} 
+                />
+                <p className="text-gray-600 text-base md:text-lg mt-4 max-w-2xl mx-auto px-4">
+                  Advanced products for unique requirements
+                </p>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
+                {productsBySection.specialty.map((product) => (
+                  <ProductCard key={product.id} product={product} />
+                ))}
+              </div>
             </div>
           </section>
         )}

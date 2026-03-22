@@ -8,7 +8,7 @@ const BrandsEcosystem = () => {
       color: '#E07B39',
       gradient: 'from-[#FFF5EB] via-white to-[#FFF5EB]',
       accentColor: '#E07B39',
-      icon: '🏗️',
+      logo: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/cwqu8ri7_Screenshot%202026-03-10%20at%206.05.54%E2%80%AFPM.png',
       image: 'https://images.unsplash.com/photo-1703868669362-562283170216?crop=entropy&cs=srgb&fm=jpg&q=85'
     },
     {
@@ -16,7 +16,7 @@ const BrandsEcosystem = () => {
       color: '#8E44AD',
       gradient: 'from-[#F4ECF7] via-white to-[#F4ECF7]',
       accentColor: '#8E44AD',
-      icon: '⚗️',
+      logo: 'https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/ivdpxzwa_Screenshot%202026-03-17%20at%205.35.40%E2%80%AFPM.png',
       image: 'https://images.unsplash.com/photo-1598056036946-3cfa8493bfdf?crop=entropy&cs=srgb&fm=jpg&q=85'
     },
     {
@@ -24,7 +24,7 @@ const BrandsEcosystem = () => {
       color: '#2C5F2D',
       gradient: 'from-[#E8F5E9] via-white to-[#E8F5E9]',
       accentColor: '#2C5F2D',
-      icon: '🌲',
+      logo: '/qurotuff-logo.png',
       image: 'https://images.unsplash.com/photo-1626958390085-c9e945a7f0c4?crop=entropy&cs=srgb&fm=jpg&q=85'
     }
   ];
@@ -79,15 +79,18 @@ const BrandsEcosystem = () => {
 
                 {/* Content */}
                 <div className="relative z-10 flex flex-col h-full">
-                  {/* Icon Badge */}
+                  {/* Logo Badge */}
                   <div 
-                    className="w-20 h-20 rounded-2xl flex items-center justify-center text-4xl mb-6 shadow-lg transition-transform duration-500 group-hover:scale-110"
+                    className="w-24 h-24 rounded-2xl flex items-center justify-center mb-6 shadow-lg transition-transform duration-500 group-hover:scale-110 bg-white p-3"
                     style={{ 
-                      backgroundColor: `${brand.color}15`,
                       border: `2px solid ${brand.color}30`
                     }}
                   >
-                    {brand.icon}
+                    <img 
+                      src={brand.logo} 
+                      alt={`${brand.name} logo`}
+                      className="w-full h-full object-contain"
+                    />
                   </div>
 
                   {/* Brand Name */}
