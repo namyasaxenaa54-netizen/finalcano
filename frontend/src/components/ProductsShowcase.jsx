@@ -19,7 +19,8 @@ const ProductsShowcase = () => {
       products: blackberryProducts
     },
     {
-      brand: 'Furniture',
+      
+      brand: 'Quro Tuff',
       color: '#A68A7A',
       gradient: 'from-[#A68A7A] to-[#8B7E8B]',
       products: furnitureProducts
