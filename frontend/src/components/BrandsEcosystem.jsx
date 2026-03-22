@@ -79,9 +79,9 @@ const BrandsEcosystem = () => {
 
                 {/* Content */}
                 <div className="relative z-10 flex flex-col h-full">
-                  {/* Logo Badge */}
+                  {/* Logo Badge - Larger, better filled */}
                   <div 
-                    className="w-24 h-24 rounded-2xl flex items-center justify-center mb-6 shadow-lg transition-transform duration-500 group-hover:scale-110 bg-white p-3"
+                    className="w-32 h-32 rounded-2xl flex items-center justify-center mb-6 shadow-lg transition-transform duration-500 group-hover:scale-110 bg-white overflow-hidden"
                     style={{ 
                       border: `2px solid ${brand.color}30`
                     }}
@@ -89,7 +89,8 @@ const BrandsEcosystem = () => {
                     <img 
                       src={brand.logo} 
                       alt={`${brand.name} logo`}
-                      className="w-full h-full object-contain"
+                      className="w-full h-full object-cover"
+                      style={{ padding: '8px' }}
                     />
                   </div>
 
