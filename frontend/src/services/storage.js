@@ -11,7 +11,10 @@ export const storageService = {
         .from('site-assets')
         .upload(filePath, file);
 
-      if (uploadError) throw uploadError;
+      if (uploadError) {
+        console.error('Supabase Storage Error:', uploadError);
+        throw uploadError;
+      }
 
       const { data } = supabase.storage
         .from('site-assets')

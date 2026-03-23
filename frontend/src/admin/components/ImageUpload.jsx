@@ -24,6 +24,7 @@ const ImageUpload = ({ onImageUpload, currentImage = null, label = "Upload Image
     }
 
     try {
+      setUploading(true);
       const publicUrl = await storageService.uploadImage(file);
       setPreview(publicUrl);
       onImageUpload(publicUrl);

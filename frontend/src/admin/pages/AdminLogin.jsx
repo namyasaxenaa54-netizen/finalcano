@@ -29,7 +29,7 @@ const AdminLogin = () => {
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 flex items-center justify-center p-4">
       <div className="max-w-md w-full">
         <div className="text-center mb-8">
-          <img 
+          <img
             src="https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/lrvcnut7_Screenshot%202026-03-14%20at%203.14.05%E2%80%AFPM.png"
             alt="CanoCrystal"
             className="h-20 w-auto mx-auto mb-4"
@@ -79,7 +79,7 @@ const AdminLogin = () => {
 
           <div className="mt-6 p-4 bg-blue-50 rounded-lg">
             <p className="text-xs text-blue-800 font-medium">Default Credentials:</p>
-            <p className="text-xs text-blue-600 mt-1">Username: admin | Password: admin123</p>
+            <p className="text-xs text-blue-600 mt-1">Username: test@admin.com | Password: admin123</p>
           </div>
         </div>
 
