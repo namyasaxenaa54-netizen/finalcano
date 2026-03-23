@@ -56,7 +56,7 @@ const Header = () => {
             aria-label="Return to homepage"
           >
             <img
-              src="https://crystal-brands-1.preview.emergentagent.com/logo-transparent.png"
+              src="https://lwzzckrzzyvgbaxcwasg.supabase.co/storage/v1/object/public/site-assets/uploads/cznsro787qj.png"
               alt="CanoCrystal - Return to Home"
               className="h-16 sm:h-18 md:h-20 w-auto"
               style={{ transform: 'scale(0.74)', transformOrigin: 'center' }}

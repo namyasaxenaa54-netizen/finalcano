@@ -33,8 +33,8 @@ const LightThemeHero = () => {
       subtitle: 'Strength & Elegance Combined',
       color: '#2C5F2D',
       lightColor: '#E8F5E9',
-      image: 'https://crystal-brands-1.preview.emergentagent.com/qurotuff-logo.png',
-      logo: 'https://crystal-brands-1.preview.emergentagent.com/qurotuff-logo.png',
+      image: 'https://lwzzckrzzyvgbaxcwasg.supabase.co/storage/v1/object/public/site-assets/uploads/jex8xjrj82i.png',
+      logo: 'https://lwzzckrzzyvgbaxcwasg.supabase.co/storage/v1/object/public/site-assets/uploads/jex8xjrj82i.png',
       icon: '🌲'
     }
   ];
@@ -53,7 +53,7 @@ const LightThemeHero = () => {
           {/* Logo - Final transparent version, perfectly sized */}
           <div className="mb-12 animate-fade-in">
             <img
-              src="https://crystal-brands-1.preview.emergentagent.com/logo-transparent.png"
+              src="https://lwzzckrzzyvgbaxcwasg.supabase.co/storage/v1/object/public/site-assets/uploads/cznsro787qj.png"
               alt="CanoCrystal"
               className="h-40 md:h-48 lg:h-56 w-auto mx-auto drop-shadow-2xl"
               style={{ transform: 'scale(0.92)', transformOrigin: 'center' }}

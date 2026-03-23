@@ -33,7 +33,7 @@ const SleekLoader = ({ onComplete }) => {
         {/* Logo - Final transparent version */}
         <div className="animate-logo-entrance">
           <img
-            src="https://crystal-brands-1.preview.emergentagent.com/logo-transparent.png"
+            src="https://lwzzckrzzyvgbaxcwasg.supabase.co/storage/v1/object/public/site-assets/uploads/cznsro787qj.png"
             alt="CanoCrystal"
             className="w-96 h-auto"
           />
