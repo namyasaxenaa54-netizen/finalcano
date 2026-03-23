@@ -32,8 +32,8 @@ const SleekLoader = ({ onComplete }) => {
       <div className="relative flex flex-col items-center">
         {/* Logo - Final transparent version */}
         <div className="animate-logo-entrance">
-          <img 
-            src="/logo-transparent.png"
+          <img
+            src="https://crystal-brands-1.preview.emergentagent.com/logo-transparent.png"
             alt="CanoCrystal"
             className="w-96 h-auto"
           />
@@ -42,7 +42,7 @@ const SleekLoader = ({ onComplete }) => {
         {/* Elegant loading bar */}
         <div className="mt-12 w-64">
           <div className="h-1 bg-gray-200 rounded-full overflow-hidden">
-            <div 
+            <div
               className="h-full bg-gradient-to-r from-[#E67E22] via-[#8E44AD] to-[#7D6608] rounded-full transition-all duration-300 ease-out"
               style={{ width: `${progress}%` }}
             />

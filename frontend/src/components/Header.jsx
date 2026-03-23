@@ -50,13 +50,13 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
         <div className="flex items-center justify-between gap-4">
           {/* Logo - Final transparent version, perfectly sized */}
-          <button 
+          <button
             onClick={() => navigate('/')}
             className="flex items-center flex-shrink-0 hover:opacity-80 transition-opacity cursor-pointer"
             aria-label="Return to homepage"
           >
             <img
-              src="/logo-transparent.png"
+              src="https://crystal-brands-1.preview.emergentagent.com/logo-transparent.png"
               alt="CanoCrystal - Return to Home"
               className="h-16 sm:h-18 md:h-20 w-auto"
               style={{ transform: 'scale(0.74)', transformOrigin: 'center' }}

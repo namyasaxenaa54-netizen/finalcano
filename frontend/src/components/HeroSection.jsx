@@ -33,8 +33,8 @@ const LightThemeHero = () => {
       subtitle: 'Strength & Elegance Combined',
       color: '#2C5F2D',
       lightColor: '#E8F5E9',
-      image: 'https://images.unsplash.com/photo-1626958390085-c9e945a7f0c4',
-      logo: '/qurotuff-logo.png',
+      image: 'https://crystal-brands-1.preview.emergentagent.com/qurotuff-logo.png',
+      logo: 'https://crystal-brands-1.preview.emergentagent.com/qurotuff-logo.png',
       icon: '🌲'
     }
   ];
@@ -52,8 +52,8 @@ const LightThemeHero = () => {
         <div className="text-center mb-20 pt-32">
           {/* Logo - Final transparent version, perfectly sized */}
           <div className="mb-12 animate-fade-in">
-            <img 
-              src="/logo-transparent.png"
+            <img
+              src="https://crystal-brands-1.preview.emergentagent.com/logo-transparent.png"
               alt="CanoCrystal"
               className="h-40 md:h-48 lg:h-56 w-auto mx-auto drop-shadow-2xl"
               style={{ transform: 'scale(0.92)', transformOrigin: 'center' }}
@@ -64,7 +64,7 @@ const LightThemeHero = () => {
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 animate-fade-in-up">
             Choose Your <span className="bg-gradient-to-r from-[#E67E22] via-[#8E44AD] to-[#7D6608] bg-clip-text text-transparent">Excellence</span>
           </h1>
-          
+
           <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto mb-8 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
             Explore our premium brands - from construction chemicals to luxury furniture
           </p>
@@ -73,7 +73,7 @@ const LightThemeHero = () => {
           <div className="flex flex-wrap justify-center gap-3 mb-4 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
             {[
               'ISO 9001:2015',
-              'ISO 14001:2018', 
+              'ISO 14001:2018',
               'ISI Certified',
               'TÜV SUD',
               'CE Marking',
@@ -111,12 +111,12 @@ const LightThemeHero = () => {
               <div className="relative h-[580px] rounded-3xl overflow-hidden bg-white shadow-2xl hover:shadow-3xl transition-all duration-500 hover:-translate-y-6 border-2 border-gray-100">
                 {/* Background Image with Better Overlay */}
                 <div className="absolute inset-0">
-                  <img 
+                  <img
                     src={brand.image}
                     alt={brand.name}
                     className="w-full h-full object-cover opacity-30 group-hover:opacity-40 transition-all duration-700 group-hover:scale-105"
                   />
-                  <div 
+                  <div
                     className="absolute inset-0"
                     style={{ background: `linear-gradient(135deg, ${brand.lightColor} 0%, white 100%)` }}
                   />
@@ -127,27 +127,25 @@ const LightThemeHero = () => {
                   {/* Top: Large Logo */}
                   <div className="flex flex-col items-center text-center">
                     {brand.logo ? (
-                      <div 
-                        className={`w-44 h-44 rounded-3xl overflow-hidden shadow-2xl mb-6 bg-white group-hover:scale-105 transition-transform duration-500 ${
-                          brand.id === 'canobond' ? '' : 'p-4 flex items-center justify-center'
-                        }`}
-                        style={{ 
+                      <div
+                        className={`w-44 h-44 rounded-3xl overflow-hidden shadow-2xl mb-6 bg-white group-hover:scale-105 transition-transform duration-500 ${brand.id === 'canobond' ? '' : 'p-4 flex items-center justify-center'
+                          }`}
+                        style={{
                           border: `4px solid ${brand.color}`,
                           boxShadow: `0 15px 50px ${brand.color}50`
                         }}
                       >
-                        <img 
-                          src={brand.logo} 
+                        <img
+                          src={brand.logo}
                           alt={`${brand.name} logo`}
-                          className={`w-full h-full ${
-                            brand.id === 'canobond' ? 'object-cover' : 'object-contain'
-                          }`}
+                          className={`w-full h-full ${brand.id === 'canobond' ? 'object-cover' : 'object-contain'
+                            }`}
                         />
                       </div>
                     ) : (
-                      <div 
+                      <div
                         className="w-44 h-44 rounded-3xl flex items-center justify-center text-7xl shadow-2xl mb-6 bg-white group-hover:scale-105 transition-transform duration-500"
-                        style={{ 
+                        style={{
                           border: `4px solid ${brand.color}`,
                           boxShadow: `0 15px 50px ${brand.color}50`
                         }}
@@ -155,13 +153,13 @@ const LightThemeHero = () => {
                         {brand.icon}
                       </div>
                     )}
-                    
+
                     {/* Brand Tag */}
-                    <div 
+                    <div
                       className="px-6 py-2.5 rounded-full shadow-lg mb-4"
-                      style={{ 
-                        backgroundColor: `${brand.color}20`, 
-                        border: `2px solid ${brand.color}40` 
+                      style={{
+                        backgroundColor: `${brand.color}20`,
+                        border: `2px solid ${brand.color}40`
                       }}
                     >
                       <span className="font-bold text-sm tracking-wide" style={{ color: brand.color }}>
@@ -172,7 +170,7 @@ const LightThemeHero = () => {
 
                   {/* Bottom: Brand Info */}
                   <div className="text-center">
-                    <h2 
+                    <h2
                       className="text-5xl md:text-6xl font-bold mb-4 drop-shadow-sm"
                       style={{ color: brand.color }}
                     >
@@ -183,9 +181,9 @@ const LightThemeHero = () => {
                     </p>
 
                     {/* CTA Button */}
-                    <div 
+                    <div
                       className="inline-flex items-center space-x-3 px-10 py-5 rounded-full shadow-xl group-hover:shadow-2xl transition-all duration-300 group-hover:translate-y-[-4px]"
-                      style={{ 
+                      style={{
                         backgroundColor: brand.color,
                         boxShadow: `0 8px 30px ${brand.color}70`
                       }}
@@ -197,15 +195,15 @@ const LightThemeHero = () => {
                 </div>
 
                 {/* Animated Decorative Elements */}
-                <div 
+                <div
                   className="absolute -top-20 -right-20 w-52 h-52 rounded-full opacity-10 group-hover:scale-150 group-hover:opacity-20 transition-all duration-1000"
                   style={{ backgroundColor: brand.color }}
                 />
-                <div 
+                <div
                   className="absolute -bottom-20 -left-20 w-52 h-52 rounded-full opacity-10 group-hover:scale-150 group-hover:opacity-20 transition-all duration-1000"
                   style={{ backgroundColor: brand.color }}
                 />
-                
+
                 {/* Shine Effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
               </div>
