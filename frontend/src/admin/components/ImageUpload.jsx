@@ -31,7 +31,8 @@ const ImageUpload = ({ onImageUpload, currentImage = null, label = "Upload Image
       toast.success('Image uploaded successfully!');
     } catch (error) {
       console.error('Upload error:', error);
-      toast.error('Failed to upload image');
+      const message = error.message || 'Failed to upload image';
+      toast.error(message);
     } finally {
       setUploading(false);
     }
