@@ -1,0 +1,36 @@
+/* CanoCrystal App Styles */
+
+.App {
+  min-height: 100vh;
+  background: #FFFFFF;
+}
+
+/* Smooth transitions for interactive elements */
+button,
+a,
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+}
+
+/* Hover lift effect */
+button:hover,
+.card:hover {
+  transform: translateY(-2px);
+}
+
+/* Focus visible styles for accessibility */
+*:focus-visible {
+  outline: 2px solid #4C8FFF;
+  outline-offset: 2px;
+}
+
+/* Disable text selection on buttons */
+button {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Smooth scroll padding for fixed header */
+html {
+  scroll-padding-top: 80px;
+}
