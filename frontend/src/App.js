@@ -38,6 +38,7 @@ import CompanyManager from './admin/pages/CompanyManager';
 function HomePage() {
   return (
     <>
+      <SEO />
       <Header />
       <main>
         <LightThemeHero />
