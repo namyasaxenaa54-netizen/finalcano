@@ -5,8 +5,8 @@ const SocialMediaFloat = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const socialLinks = [
-    { icon: Facebook, href: 'https://facebook.com/canocrystal', label: 'Facebook', color: 'bg-[#1877F2]' },
-    { icon: Instagram, href: 'https://instagram.com/canocrystal', label: 'Instagram', color: 'bg-gradient-to-br from-[#F58529] via-[#DD2A7B] to-[#8134AF]' },
+    { icon: Facebook, href: 'https://www.facebook.com/share/1M4XA51DX3/?mibextid=wwXIfr', label: 'Facebook', color: 'bg-[#1877F2]' },
+    { icon: Instagram, href: 'https://www.instagram.com/cano._crystal?igsh=MnQ4dzdtcnFzb2hm&utm_source=qr', label: 'Instagram', color: 'bg-gradient-to-br from-[#F58529] via-[#DD2A7B] to-[#8134AF]' },
     { icon: Linkedin, href: 'https://linkedin.com/company/canocrystal', label: 'LinkedIn', color: 'bg-[#0A66C2]' },
     { icon: Twitter, href: 'https://twitter.com/canocrystal', label: 'Twitter', color: 'bg-[#1DA1F2]' }
   ];
