@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet';
 
-const SEO = ({ 
-  title = "Cano Crystal | Advanced Tile Adhesives & Surface Solutions",
+const SEO = ({
+  title = "Cano Crystal | Advanced Tile Adhesives & Surface Solutions | Cano crystal | blackberry | Quro tuff |",
   description = "Cano Crystal develops advanced tile adhesives engineered for strength, durability, and performance across residential, commercial, and industrial applications.",
   keywords = "tile adhesive, epoxy grout, construction chemicals, CanoBond, Blackberry, premium furniture, building materials",
   image = "https://customer-assets.emergentagent.com/job_crystal-brands-1/artifacts/lrvcnut7_Screenshot%202026-03-14%20at%203.14.05%E2%80%AFPM.png",
@@ -15,21 +15,21 @@ const SEO = ({
       <meta name="title" content={title} />
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
-      
+
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={type} />
       <meta property="og:url" content={url} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
-      
+
       {/* Twitter */}
       <meta property="twitter:card" content="summary_large_image" />
       <meta property="twitter:url" content={url} />
       <meta property="twitter:title" content={title} />
       <meta property="twitter:description" content={description} />
       <meta property="twitter:image" content={image} />
-      
+
       {/* Additional SEO */}
       <meta name="robots" content="index, follow" />
       <meta name="language" content="English" />
