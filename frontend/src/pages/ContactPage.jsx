@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, Mail, Phone, MapPin, Send } from 'lucide-react';
 import { Button } from '../components/ui/button';
 
+import SEO from '../components/SEO';
+
 const ContactPage = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
@@ -25,7 +27,13 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#FDFBF7] via-white to-[#FFF9F0]">
+    <>
+      <SEO 
+        title="Contact Cano Crystal | Get in Touch for Support & Inquiries"
+        description="Reach out to Cano Crystal for product inquiries, support, or partnership opportunities. Our team is here to help you with your construction and furniture needs."
+        keywords="contact canocrystal, customer support, business inquiries, partnership"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-[#FDFBF7] via-white to-[#FFF9F0]">
       {/* Header */}
       <div className="bg-white shadow-sm sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -193,6 +201,7 @@ const ContactPage = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

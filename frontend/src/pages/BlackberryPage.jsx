@@ -3,6 +3,8 @@ import BrandPageTemplate from '../components/BrandPageTemplate';
 import { brandService } from '../services/brands';
 import { productService } from '../services/products';
 
+import SEO from '../components/SEO';
+
 const BlackberryPage = () => {
   const [brandData, setBrandData] = useState(null);
   const [products, setProducts] = useState([]);
@@ -55,7 +57,16 @@ const BlackberryPage = () => {
     );
   }
 
-  return <BrandPageTemplate brandData={brandData} products={products} />;
+  return (
+    <>
+      <SEO 
+        title="Blackberry | Premium Epoxy Grouts & Surface Finishes"
+        description="Blackberry provides specialized epoxy grouts and high-performance chemical solutions for perfect surface finishes and aesthetic excellence."
+        keywords="Blackberry grout, epoxy grout, surface finish, decorative grout, chemical solutions"
+      />
+      <BrandPageTemplate brandData={brandData} products={products} />
+    </>
+  );
 };
 
 export default BlackberryPage;

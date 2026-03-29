@@ -4,6 +4,8 @@ import { ArrowLeft, Factory, Award, Globe, Users, Target, Eye } from 'lucide-rea
 import { Button } from '../components/ui/button';
 import { companyService } from '../services/company';
 
+import SEO from '../components/SEO';
+
 const AboutPage = () => {
   const navigate = useNavigate();
   const [companyInfo, setCompanyInfo] = useState(null);
@@ -43,7 +45,13 @@ const AboutPage = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#FDFBF7] via-white to-[#FFF9F0]">
+    <>
+      <SEO 
+        title="About Cano Crystal | Our Story, Vision & Excellence"
+        description="Learn about Cano Crystal's journey, from our commitment to innovation to our growing network of manufacturing plants delivering excellence across India."
+        keywords="Cano Crystal story, about canocrystal, company vision, manufacturing plants India"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-[#FDFBF7] via-white to-[#FFF9F0]">
       {/* Header */}
       <div className="bg-white shadow-sm sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -250,6 +258,7 @@ const AboutPage = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

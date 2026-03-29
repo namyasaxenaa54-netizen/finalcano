@@ -38,7 +38,11 @@ import CompanyManager from './admin/pages/CompanyManager';
 function HomePage() {
   return (
     <>
-      <SEO />
+      <SEO 
+        title="Cano Crystal | Advanced Tile Adhesives & Surface Solutions"
+        description="Discover Cano Crystal's advanced tile adhesives, epoxy grouts, and premium furniture solutions. Engineered for strength, durability, and modern living."
+        keywords="tile adhesive, epoxy grout, construction chemicals, premium furniture, building materials, CanoBond, Blackberry"
+      />
       <Header />
       <main>
         <LightThemeHero />

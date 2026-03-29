@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, MapPin, Phone, Mail, Building2, CheckCircle } from 'lucide-react';
 import { Button } from '../components/ui/button';
 
+import SEO from '../components/SEO';
+
 const DistributorsPage = () => {
   const navigate = useNavigate();
 
@@ -50,7 +52,13 @@ const DistributorsPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#FDFBF7] via-white to-[#FFF9F0]">
+    <>
+      <SEO 
+        title="Become a Cano Crystal Distributor | Join Our Growing Network"
+        description="Join the Cano Crystal family. Apply to become a distributor and partner with us to deliver premium construction solutions across India."
+        keywords="distributor opportunities, construction chemical dealer, furniture distributor, business partnership"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-[#FDFBF7] via-white to-[#FFF9F0]">
       {/* Header */}
       <div className="bg-white shadow-sm sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -174,6 +182,7 @@ const DistributorsPage = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

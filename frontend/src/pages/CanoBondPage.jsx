@@ -51,9 +51,9 @@ const CanoBondPage = () => {
   return (
     <>
       <SEO 
-        title="CanoBond - German Intelligence. Unshakeable Bond | CanoCrystal"
-        description="Professional-grade adhesives and construction chemicals for superior bonding and durability. Premium tile adhesives from CanoBond."
-        keywords="canobond, tile adhesive, construction adhesive, german quality, premium adhesive"
+        title="CanoBond | Premium Tile Adhesives & Construction Chemicals"
+        description="CanoBond offers professional-grade tile adhesives and construction chemicals with German Intelligence for an unshakeable bond and long-lasting durability."
+        keywords="CanoBond, tile adhesive, construction chemicals, heavy duty adhesive, floor bonding"
       />
       {brandData ? (
         <BrandPageTemplate brandData={brandData} products={products} />

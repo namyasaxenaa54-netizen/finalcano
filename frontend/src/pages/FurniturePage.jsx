@@ -3,6 +3,8 @@ import BrandPageTemplate from '../components/BrandPageTemplate';
 import { brandService } from '../services/brands';
 import { productService } from '../services/products';
 
+import SEO from '../components/SEO';
+
 const FurniturePage = () => {
   const [brandData, setBrandData] = useState(null);
   const [products, setProducts] = useState([]);
@@ -59,7 +61,16 @@ const FurniturePage = () => {
     );
   }
 
-  return <BrandPageTemplate brandData={brandData} products={products} />;
+  return (
+    <>
+      <SEO 
+        title="Cano Crystal Furniture | Luxury Collections for Modern Living"
+        description="Browse our premium furniture collection, designed to blend elegance with functionality for modern residential and commercial spaces."
+        keywords="luxury furniture, modern furniture, premium seating, office furniture, home decor"
+      />
+      <BrandPageTemplate brandData={brandData} products={products} />
+    </>
+  );
 };
 
 export default FurniturePage;

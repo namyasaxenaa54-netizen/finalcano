@@ -3,6 +3,8 @@ import BrandPageTemplate from '../components/BrandPageTemplate';
 import { brandService } from '../services/brands';
 import { productService } from '../services/products';
 
+import SEO from '../components/SEO';
+
 const QuroTuffPage = () => {
   const [brandData, setBrandData] = useState(null);
   const [products, setProducts] = useState([]);
@@ -59,7 +61,16 @@ const QuroTuffPage = () => {
     );
   }
 
-  return <BrandPageTemplate brandData={brandData} products={products} />;
+  return (
+    <>
+      <SEO 
+        title="Quro Tuff | High-Performance Construction Chemicals"
+        description="Explore Quro Tuff's range of high-performance construction chemicals and bonding solutions designed for extreme durability and strength."
+        keywords="Quro Tuff, construction chemicals, bonding agents, industrial adhesives, tuff bond"
+      />
+      <BrandPageTemplate brandData={brandData} products={products} />
+    </>
+  );
 };
 
 export default QuroTuffPage;
