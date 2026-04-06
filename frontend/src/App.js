@@ -1,6 +1,7 @@
 import React, { useState, useEffect, lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
+import './performance.css';
 import SleekLoader from './components/Loader';
 import SEO from './components/SEO';
 import ErrorBoundary from './components/ErrorBoundary';
@@ -58,22 +59,26 @@ function App() {
     setLoading(false);
   };
 
-  // Initialize Lenis smooth scrolling
+  // Optimized smooth scrolling - lightweight
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      duration: 0.8,
+      easing: (t) => t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2,
       smoothWheel: true,
+      smoothTouch: false, // Disable on touch for better performance
+      touchMultiplier: 0,
     });
 
+    let rafId;
     function raf(time) {
       lenis.raf(time);
-      requestAnimationFrame(raf);
+      rafId = requestAnimationFrame(raf);
     }
 
-    requestAnimationFrame(raf);
+    rafId = requestAnimationFrame(raf);
 
     return () => {
+      cancelAnimationFrame(rafId);
       lenis.destroy();
     };
   }, []);

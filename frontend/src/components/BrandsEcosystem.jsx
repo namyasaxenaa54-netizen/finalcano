@@ -63,7 +63,7 @@ const BrandsEcosystem = () => {
               className="group"
               style={{ animationDelay: `${index * 0.15}s` }}
             >
-              <div className={`relative h-full bg-gradient-to-br ${brand.gradient} rounded-sm p-10 sm:p-12 shadow-xl hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 overflow-hidden border border-gray-200`}>
+              <div className={`relative h-full bg-gradient-to-br ${brand.gradient} rounded-sm p-10 sm:p-12 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 overflow-hidden border border-gray-200`}>
                 {/* Decorative corner element */}
                 <div 
                   className="absolute top-0 right-0 w-32 h-32 opacity-10 blur-3xl transition-all duration-700 group-hover:scale-150"
@@ -74,7 +74,7 @@ const BrandsEcosystem = () => {
                 <div className="relative z-10 flex flex-col h-full">
                   {/* Logo Badge - Properly contained */}
                   <div 
-                    className="w-32 h-32 rounded-2xl flex items-center justify-center mb-6 shadow-lg transition-transform duration-500 group-hover:scale-110 bg-white p-4"
+                    className="w-32 h-32 rounded-2xl flex items-center justify-center mb-6 shadow-lg transition-transform duration-300 group-hover:scale-105 bg-white p-4"
                     style={{ 
                       border: `2px solid ${brand.color}30`
                     }}
@@ -101,7 +101,7 @@ const BrandsEcosystem = () => {
                   
                   {/* Accent line */}
                   <div 
-                    className="w-16 h-1 rounded-full mb-6 transition-all duration-500 group-hover:w-24"
+                    className="w-16 h-1 rounded-full mb-6 transition-all duration-300 group-hover:w-20"
                     style={{ backgroundColor: brand.color }}
                   />
                   
