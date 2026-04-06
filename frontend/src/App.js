@@ -59,14 +59,15 @@ function App() {
     setLoading(false);
   };
 
-  // Optimized smooth scrolling - lightweight
+  // Ultra-smooth scrolling - buttery feel
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 0.8,
-      easing: (t) => t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2,
+      duration: 1.5,
+      easing: (t) => 1 - Math.pow(1 - t, 3),
       smoothWheel: true,
-      smoothTouch: false, // Disable on touch for better performance
-      touchMultiplier: 0,
+      wheelMultiplier: 0.8,
+      touchMultiplier: 1.5,
+      infinite: false,
     });
 
     let rafId;
