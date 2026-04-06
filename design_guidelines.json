@@ -1,0 +1,137 @@
+{
+  "theme": "dark-and-light-hybrid",
+  "archetype": "ARCHETYPE 4: SWISS & HIGH-CONTRAST + ARCHETYPE 1: ORGANIC & EARTHY",
+  "typography": {
+    "headings": {
+      "font_family": "Chivo",
+      "import_url": "https://fonts.googleapis.com/css2?family=Chivo:wght@300;400;700;900&display=swap",
+      "weights": ["300 (Light for elegance)", "900 (Black for authority)"],
+      "usage_rules": "Use tight tracking (tracking-tighter) for large headings. Never use Inter for headings."
+    },
+    "body": {
+      "font_family": "Inter",
+      "import_url": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap",
+      "usage_rules": "Use for paragraphs, descriptions, and functional UI text."
+    },
+    "technical_specs": {
+      "font_family": "JetBrains Mono",
+      "import_url": "https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap",
+      "usage_rules": "Use exclusively for product specifications, measurements, and technical badges. Use uppercase with wide tracking (tracking-[0.2em])."
+    }
+  },
+  "colors": {
+    "parent_brand": {
+      "name": "CanoCrystal",
+      "background": "#F9F9F6",
+      "text_primary": "#0A0A0A",
+      "accent": "#0A0A0A",
+      "surface": "#F2F2EF",
+      "border": "rgba(10,10,10,0.1)"
+    },
+    "sub_brands": {
+      "canobond": {
+        "theme": "Orange",
+        "primary": "#C85A17",
+        "primary_hover": "#A84B13",
+        "background_tint": "#FFF9F5",
+        "text_on_primary": "#FFFFFF"
+      },
+      "blackberry": {
+        "theme": "Purple",
+        "primary": "#4A154B",
+        "primary_hover": "#361036",
+        "background_tint": "#FDF8FD",
+        "text_on_primary": "#FFFFFF"
+      },
+      "quro_tuff": {
+        "theme": "Green",
+        "primary": "#1E3F20",
+        "primary_hover": "#152C16",
+        "background_tint": "#F6FAF6",
+        "text_on_primary": "#FFFFFF"
+      }
+    },
+    "rules": "Avoid default generic colors. The brand colors serve as functional accents on a high-contrast structural baseline (Obsidian & Bone White). Remove all simple linear gradients."
+  },
+  "visual_enhancers": {
+    "texture": "Apply a subtle SVG noise/grain overlay (opacity 2-4%) globally to eliminate digital flatness and create a physical, architectural feel.",
+    "glassmorphism": "For sticky headers/navs: bg-white/70, backdrop-blur-xl, backdrop-saturate-150, border-b border-black/5. NEVER use fully transparent backgrounds behind text.",
+    "grid_borders": "For product specification tables and feature grids: Use the 'Technical Look' with border-collapse and 1px border-black/10 on right and bottom of grid items."
+  },
+  "layouts_and_grids": {
+    "spacing_philosophy": "Generous spacing. Use py-24 or py-32 for main sections. Containers with borders MUST have p-6 or p-8 padding.",
+    "portfolio_showcase": "Use 'MODE A: THE TETRIS GRID'. Asymmetric grid mapping (grid-cols-1 md:grid-cols-12 gap-8). Mix hero elements (col-span-8) with supporting squares (col-span-4).",
+    "product_catalog": "Use 'MODE B: High Density Grid'. Minimal padding between technical specs to create a dense, informative layout (grid-cols-1 md:grid-cols-3 gap-6).",
+    "alignment": "Left-align paragraphs, inputs, and dense content. Never center-everything."
+  },
+  "components": {
+    "product_cards": {
+      "style": "Flat solid background or slight grain, 1px solid border (border-black/10). Sharp corners (rounded-none or rounded-sm). No soft blurry shadows.",
+      "hover": "Slight image scale (scale-105) within an overflow-hidden container. Border darkens.",
+      "information_hierarchy": "Overline (JetBrains Mono, Uppercase) -> Product Name (Chivo, large) -> Key Spec -> CTA."
+    },
+    "buttons": {
+      "style": "Sharp or slightly rounded (rounded-sm). High contrast solid color (Brand Primary or Obsidian).",
+      "hover": "Must have explicit hover states: hover:bg-black/90 or hover:bg-[brand-hover]."
+    },
+    "category_headers": {
+      "style": "Massive typography (text-6xl to text-8xl) tightly tracked. Remove all gradient text effects. Use solid black or solid brand color."
+    }
+  },
+  "motion_and_interaction": {
+    "scrolling": "MANDATORY: Install and configure 'lenis' for momentum/smooth scrolling to achieve a premium architectural feel.",
+    "transitions": "Use Framer Motion for staggered entrance animations on product grids and 'Tracing Beam' effects on premium portfolio cards.",
+    "micro_interactions": "Images should have a slow, subtle parallax effect on scroll. Buttons should have a slight transform on click."
+  },
+  "media": {
+    "rules": "Images must not exceed 80vh on mobile. Ensure subjects are present to avoid artificial feeling.",
+    "image_urls": [
+      {
+        "url": "https://images.unsplash.com/photo-1638885930125-85350348d266?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzN8MHwxfHNlYXJjaHwxfHxwcmVtaXVtJTIwbW9kZXJuJTIwYXJjaGl0ZWN0dXJlJTIwaW50ZXJpb3J8ZW58MHx8fHwxNzc1NDg3MDM3fDA&ixlib=rb-4.1.0&q=85",
+        "description": "Premium modern architecture living room interior",
+        "category": "CanoCrystal Homepage Hero"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1771929662486-f793e08f0f16?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHw0fHxsdXh1cnklMjBtYXJibGUlMjB0aWxlJTIwZmxvb3J8ZW58MHx8fHwxNzc1NDg3MDM3fDA&ixlib=rb-4.1.0&q=85",
+        "description": "Luxury modern bathroom with marble tile floor",
+        "category": "Blackberry Brand Page Hero"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1523413307857-ef24c53571ae?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1OTV8MHwxfHNlYXJjaHwzfHxsYXlpbmclMjBjZXJhbWljJTIwdGlsZXN8ZW58MHx8fHwxNzc1NDg3MDM3fDA&ixlib=rb-4.1.0&q=85",
+        "description": "Person laying ceramic white tile",
+        "category": "CanoBond Brand Page Hero / Adhesives"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1770625468092-758e4d70f74f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MjJ8MHwxfHNlYXJjaHwzfHxwcmVtaXVtJTIwd29vZCUyMHBhbmVscyUyMHRleHR1cmV8ZW58MHx8fHwxNzc1NDg3MDM3fDA&ixlib=rb-4.1.0&q=85",
+        "description": "Premium geometric wooden wall texture",
+        "category": "Quro Tuff Brand Page Hero / Plywood"
+      }
+    ]
+  },
+  "accessibility": {
+    "contrast": "Maintain 4.5:1 ratio for standard text. Use text shadow if text is over images.",
+    "testing": "All interactive elements MUST include data-testid attribute in kebab-case (e.g., data-testid='canobond-explore-button').",
+    "motion": "Respect prefers-reduced-motion."
+  },
+  "instructions_to_main_agent": [
+    "1. Replace generic gradient headers with massive, tightly-tracked solid typography using Chivo.",
+    "2. Strip away default centered layouts and implement the asymmetric 'Tetris Grid' with ample negative space (py-24).",
+    "3. Apply specific brand color themes as accents rather than overwhelming backgrounds; use tinted neutrals for section backgrounds.",
+    "4. Add a global SVG noise overlay to give the site a tactile, premium material feel.",
+    "5. Use JetBrains Mono for product specifications and technical badges to establish B2B authority.",
+    "6. Setup lenis smooth scrolling for a premium browsing experience.",
+    "7. Ensure no transparent backgrounds are used on the navigation header; use the crystal glassmorphism technique.",
+    "8. Use Phosphor Icons (@phosphor-icons/react) with Duotone weight for high-end feel.",
+    "9. Use the provided high-quality Unsplash image URLs for the distinct sections."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "Do not converge toward generic outputs. Ensure creative, distinctive frontends.",
+    "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients.",
+    "Do not apply 'transition: all'. Apply transitions to specific properties.",
+    "Do NOT add '.App { text-align: center; }'. Left-align text for natural reading.",
+    "NEVER use AI assistant Emoji characters for icons.",
+    "Use 2-3x more spacing than feels comfortable.",
+    "All interactive elements MUST include a data-testid attribute.",
+    "Components MUST use named exports, pages MUST use default exports."
+  ]
+}
