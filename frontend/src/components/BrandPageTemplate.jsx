@@ -197,102 +197,46 @@ const BrandPageTemplate = ({ brandData, products = [] }) => {
           })}
         </div>
 
-        {/* SECTION 1: TILE ADHESIVES */}
+        {/* SECTION 1: TILE ADHESIVES - MASSIVE HEADER */}
         {productsBySection.adhesives && productsBySection.adhesives.length > 0 && (
-          <section className="mb-16 md:mb-24 relative">
-            {/* Premium Background */}
-            <div className="absolute inset-0 rounded-3xl opacity-30" 
-              style={{ 
-                background: `linear-gradient(135deg, ${brandColor}08 0%, ${brandColor}02 50%, transparent 100%)` 
-              }}
-            />
-            
-            <div className="relative py-12 md:py-16">
-              <div className="text-center mb-10 md:mb-14">
-                <div className="inline-block mb-4">
-                  <span 
-                    className="text-xs md:text-sm font-bold tracking-widest uppercase px-4 md:px-6 py-2 md:py-3 rounded-full shadow-sm"
-                    style={{ 
-                      backgroundColor: `${brandColor}15`,
-                      color: brandColor,
-                      border: `1px solid ${brandColor}30`
-                    }}
-                  >
-                    Professional Grade
-                  </span>
-                </div>
-                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 px-4"
-                  style={{ 
-                    background: `linear-gradient(135deg, ${brandColor} 0%, ${brandColor}cc 100%)`,
-                    WebkitBackgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent',
-                    backgroundClip: 'text'
-                  }}
-                >
-                  {sections?.adhesives?.title || 'Tile Adhesives'}
-                </h2>
-                <div className="w-20 sm:w-24 md:w-32 h-1.5 rounded-full mx-auto shadow-lg" 
-                  style={{ backgroundColor: brandColor }} 
-                />
-                <p className="text-gray-600 text-base md:text-lg mt-4 max-w-2xl mx-auto px-4">
-                  Premium bonding solutions engineered for excellence
-                </p>
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
-                {productsBySection.adhesives.map((product) => (
-                  <ProductCard key={product.id} product={product} />
-                ))}
-              </div>
+          <section className="mb-24 md:mb-32">
+            <div className="mb-12 md:mb-16">
+              <h2 
+                className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tighter mb-6 px-4"
+                style={{ color: brandColor }}
+              >
+                {(sections?.adhesives?.title || 'TILE ADHESIVES').toUpperCase()}
+              </h2>
+              <p className="text-gray-600 text-lg md:text-xl max-w-3xl px-4">
+                Professional bonding solutions for every application
+              </p>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 lg:gap-12">
+              {productsBySection.adhesives.map((product) => (
+                <ProductCard key={product.id} product={product} />
+              ))}
             </div>
           </section>
         )}
 
-        {/* SECTION 2: GROUTS & SOLUTIONS */}
+        {/* SECTION 2: GROUTS & SOLUTIONS - MASSIVE HEADER */}
         {productsBySection.grouts && productsBySection.grouts.length > 0 && (
-          <section className="mb-16 md:mb-24 relative">
-            {/* Premium Background - Different gradient */}
-            <div className="absolute inset-0 rounded-3xl opacity-30" 
-              style={{ 
-                background: `linear-gradient(-135deg, ${brandColor}08 0%, ${brandColor}02 50%, transparent 100%)` 
-              }}
-            />
-            
-            <div className="relative py-12 md:py-16">
-              <div className="text-center mb-10 md:mb-14">
-                <div className="inline-block mb-4">
-                  <span 
-                    className="text-xs md:text-sm font-bold tracking-widest uppercase px-4 md:px-6 py-2 md:py-3 rounded-full shadow-sm"
-                    style={{ 
-                      backgroundColor: `${brandColor}15`,
-                      color: brandColor,
-                      border: `1px solid ${brandColor}30`
-                    }}
-                  >
-                    Premium Finishes
-                  </span>
-                </div>
-                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 px-4"
-                  style={{ 
-                    background: `linear-gradient(135deg, ${brandColor} 0%, ${brandColor}cc 100%)`,
-                    WebkitBackgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent',
-                    backgroundClip: 'text'
-                  }}
-                >
-                  {sections?.grouts?.title || 'Grouts & Solutions'}
-                </h2>
-                <div className="w-20 sm:w-24 md:w-32 h-1.5 rounded-full mx-auto shadow-lg" 
-                  style={{ backgroundColor: brandColor }} 
-                />
-                <p className="text-gray-600 text-base md:text-lg mt-4 max-w-2xl mx-auto px-4">
-                  Superior grouting systems for lasting perfection
-                </p>
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
-                {productsBySection.grouts.map((product) => (
-                  <ProductCard key={product.id} product={product} />
-                ))}
-              </div>
+          <section className="mb-24 md:mb-32">
+            <div className="mb-12 md:mb-16">
+              <h2 
+                className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tighter mb-6 px-4"
+                style={{ color: brandColor }}
+              >
+                {(sections?.grouts?.title || 'GROUTS & SOLUTIONS').toUpperCase()}
+              </h2>
+              <p className="text-gray-600 text-lg md:text-xl max-w-3xl px-4">
+                Superior grouting systems for lasting perfection
+              </p>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 lg:gap-12">
+              {productsBySection.grouts.map((product) => (
+                <ProductCard key={product.id} product={product} />
+              ))}
             </div>
           </section>
         )}

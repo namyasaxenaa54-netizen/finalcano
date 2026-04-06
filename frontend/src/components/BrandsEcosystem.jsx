@@ -30,7 +30,7 @@ const BrandsEcosystem = () => {
   ];
 
   return (
-    <section id="brands" className="py-20 sm:py-32 relative overflow-hidden bg-gradient-to-b from-[#FDFBF7] via-white to-[#FDFBF7]">
+    <section id="brands" className="py-24 sm:py-32 relative overflow-hidden bg-gradient-to-b from-[#FDFBF7] via-white to-[#FDFBF7]">
       {/* Subtle pattern overlay */}
       <div className="absolute inset-0 opacity-[0.015]">
         <div 
@@ -43,34 +43,27 @@ const BrandsEcosystem = () => {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header - More Premium */}
-        <div className="text-center mb-16 sm:mb-24">
-          <div className="inline-block mb-6">
-            <span className="text-sm font-bold tracking-widest text-gray-500 uppercase bg-gradient-to-r from-gray-100 to-gray-50 px-6 py-3 rounded-full border border-gray-200 shadow-sm">
-              Our Portfolio
-            </span>
-          </div>
-          
-          <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 tracking-tight">
-            One Crystal.<br />
-            <span className="bg-gradient-to-r from-orange-600 via-purple-600 to-green-600 bg-clip-text text-transparent">
-              Three Powerful Brands.
-            </span>
+        {/* Header - Massive & Bold */}
+        <div className="mb-20 sm:mb-28">
+          <h2 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-gray-900 mb-8 tracking-tighter leading-none">
+            ONE CRYSTAL.<br />
+            <span style={{ color: '#E07B39' }}>THREE POWERFUL</span><br />
+            <span style={{ color: '#8E44AD' }}>BRANDS.</span>
           </h2>
-          <p className="text-xl sm:text-2xl text-gray-600 max-w-3xl mx-auto font-light leading-relaxed">
+          <p className="text-xl sm:text-2xl text-gray-600 max-w-3xl font-light leading-relaxed">
             United by innovation, specialized for excellence across construction, adhesives, and premium plywood
           </p>
         </div>
 
-        {/* Brand Cards - Premium Design */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
+        {/* Brand Cards - Sharper, More Spacing */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-12">
           {brands.map((brand, index) => (
             <div
               key={brand.name}
               className="group"
               style={{ animationDelay: `${index * 0.15}s` }}
             >
-              <div className={`relative h-full bg-gradient-to-br ${brand.gradient} rounded-3xl p-8 sm:p-10 shadow-xl hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 overflow-hidden border border-gray-100`}>
+              <div className={`relative h-full bg-gradient-to-br ${brand.gradient} rounded-sm p-10 sm:p-12 shadow-xl hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 overflow-hidden border border-gray-200`}>
                 {/* Decorative corner element */}
                 <div 
                   className="absolute top-0 right-0 w-32 h-32 opacity-10 blur-3xl transition-all duration-700 group-hover:scale-150"

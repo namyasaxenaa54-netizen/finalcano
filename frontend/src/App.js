@@ -4,6 +4,7 @@ import './App.css';
 import SleekLoader from './components/Loader';
 import SEO from './components/SEO';
 import ErrorBoundary from './components/ErrorBoundary';
+import Lenis from '@studio-freight/lenis';
 
 // Lazy load pages for better performance
 const Header = lazy(() => import('./components/Header'));
@@ -56,6 +57,26 @@ function App() {
   const handleLoadingComplete = () => {
     setLoading(false);
   };
+
+  // Initialize Lenis smooth scrolling
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      smoothWheel: true,
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    return () => {
+      lenis.destroy();
+    };
+  }, []);
 
   // Smooth scroll behavior
   useEffect(() => {
