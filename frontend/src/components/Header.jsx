@@ -19,6 +19,7 @@ const Header = () => {
 
   const navLinks = [
     { name: 'Home', action: () => navigate('/') },
+    { name: 'CanoBond Plywood', action: () => navigate('/canobond-plywood') },
     { name: 'About', action: () => navigate('/about') },
     { name: 'Distributors', action: () => navigate('/distributors') },
     { name: 'Contact', action: () => navigate('/contact') }

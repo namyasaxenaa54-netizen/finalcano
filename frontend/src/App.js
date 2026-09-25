@@ -17,6 +17,7 @@ const IndustriesSection = lazy(() => import('./components/IndustriesSection'));
 const ContactSection = lazy(() => import('./components/ContactSection'));
 const Footer = lazy(() => import('./components/Footer'));
 const CanoBondPage = lazy(() => import('./pages/CanoBondPage'));
+const CanoBondPlywoodPage = lazy(() => import('./pages/CanoBondPlywoodPage'));
 const BlackberryPage = lazy(() => import('./pages/BlackberryPage'));
 const QuroTuffPage = lazy(() => import('./pages/QuroTuffPage'));
 const AboutPage = lazy(() => import('./pages/AboutPage'));
@@ -105,6 +106,7 @@ function App() {
                 {/* Public Routes */}
                 <Route path="/" element={<HomePage />} />
                 <Route path="/canobond" element={<CanoBondPage />} />
+                <Route path="/canobond-plywood" element={<CanoBondPlywoodPage />} />
                 <Route path="/blackberry" element={<BlackberryPage />} />
                 <Route path="/qurotuff" element={<QuroTuffPage />} />
                 <Route path="/furniture" element={<QuroTuffPage />} />
