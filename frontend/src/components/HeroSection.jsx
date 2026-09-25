@@ -183,12 +183,12 @@ const LightThemeHero = () => {
                   {/* Bottom: Brand Info */}
                   <div className="text-center px-4">
                     <h2 
-                      className="text-4xl md:text-5xl font-bold mb-3 drop-shadow-sm leading-tight mx-auto"
+                      className="text-3xl md:text-4xl font-bold mb-3 drop-shadow-sm leading-tight mx-auto whitespace-nowrap min-h-[3rem] flex items-center justify-center"
                       style={{ color: brand.color }}
                     >
                       {brand.name}
                     </h2>
-                    <p className="text-gray-700 text-lg font-semibold mb-6 mx-auto max-w-xs">
+                    <p className="text-gray-700 text-lg font-semibold mb-6 mx-auto max-w-xs min-h-[3.5rem] flex items-center justify-center">
                       {brand.subtitle}
                     </p>
 
