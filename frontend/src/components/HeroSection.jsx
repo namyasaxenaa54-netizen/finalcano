@@ -36,6 +36,16 @@ const LightThemeHero = () => {
       image: 'https://images.unsplash.com/photo-1626958390085-c9e945a7f0c4',
       logo: '/qurotuff-logo.png',
       icon: '🌲'
+    },
+    {
+      id: 'canobond-plywood',
+      name: 'CanoBond Plywood',
+      tagline: 'Virokill Technology',
+      subtitle: 'Premium Quality Plywood',
+      color: '#1E5A8E',
+      lightColor: '#EBF4FB',
+      image: 'https://customer-assets-lqy194kg.emergentagent.net/job_crystal-brands-1/artifacts/pwy3avlr_4e353fb7-6476-4e95-a730-17bb3a5e37d8.png',
+      logo: 'https://customer-assets-lqy194kg.emergentagent.net/job_crystal-brands-1/artifacts/r07zu3oz_WhatsApp%20Image%202026-09-20%20at%2017.02.02.jpeg'
     }
   ];
 
@@ -66,7 +76,7 @@ const LightThemeHero = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto mb-8 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            Explore our premium brands - from construction chemicals to luxury furniture
+            Explore our premium brands - from construction chemicals to premium plywood solutions
           </p>
 
           {/* Certifications Trust badges */}
@@ -98,8 +108,8 @@ const LightThemeHero = () => {
           </div>
         </div>
 
-        {/* THREE BRAND CARDS - NEW PREMIUM DESIGN */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 mb-20">
+        {/* FOUR BRAND CARDS - NEW PREMIUM DESIGN */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
           {brands.map((brand, index) => (
             <div
               key={brand.id}
