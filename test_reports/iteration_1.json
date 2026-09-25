@@ -1,0 +1,16 @@
+{
+  "summary": "Verified CanoBond Plywood logo on /canobond-plywood renders fully without cropping on desktop (1920) and mobile (390) viewports. Aspect ratio preserved via object-contain; height matches h-64 (256px); max-w-full keeps it within mobile viewport.",
+  "tested_scope": ["frontend"],
+  "passed": [
+    "Logo image loads successfully (naturalWidth=1178, naturalHeight=1600, complete=true)",
+    "Rendered aspect ratio matches natural aspect ratio (0.736 == 0.736) - no cropping",
+    "Rendered height is exactly 256px (h-64 class applied correctly)",
+    "Logo fits within mobile viewport (rendered width ~188px < 390px viewport)",
+    "All visual elements visible in screenshot: elephant head, CANO BOND text, PREMIUM QUALITY PLYWOOD, ANTI VIRUS 'Kills 99.99% Viruses' badge, Hindi tagline"
+  ],
+  "failed": [],
+  "action_items": [],
+  "success_rate": {"backend": "not tested", "frontend": "100%"},
+  "retest_needed": false,
+  "full_testing_deferred": true
+}
