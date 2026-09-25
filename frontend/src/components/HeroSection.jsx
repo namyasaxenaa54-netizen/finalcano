@@ -181,27 +181,29 @@ const LightThemeHero = () => {
                   </div>
 
                   {/* Bottom: Brand Info */}
-                  <div className="text-center">
+                  <div className="text-center px-4">
                     <h2 
-                      className="text-4xl md:text-5xl font-bold mb-3 drop-shadow-sm leading-tight"
+                      className="text-4xl md:text-5xl font-bold mb-3 drop-shadow-sm leading-tight mx-auto"
                       style={{ color: brand.color }}
                     >
                       {brand.name}
                     </h2>
-                    <p className="text-gray-700 text-lg font-semibold mb-6">
+                    <p className="text-gray-700 text-lg font-semibold mb-6 mx-auto max-w-xs">
                       {brand.subtitle}
                     </p>
 
                     {/* CTA Button */}
-                    <div 
-                      className="inline-flex items-center space-x-3 px-8 py-4 rounded-full shadow-xl group-hover:shadow-2xl transition-all duration-300 group-hover:translate-y-[-4px]"
-                      style={{ 
-                        backgroundColor: brand.color,
-                        boxShadow: `0 8px 30px ${brand.color}70`
-                      }}
-                    >
-                      <span className="font-bold text-white text-base tracking-wide">Explore Products</span>
-                      <ArrowRight size={20} className="text-white group-hover:translate-x-2 transition-transform" />
+                    <div className="flex justify-center">
+                      <div 
+                        className="inline-flex items-center space-x-3 px-8 py-4 rounded-full shadow-xl group-hover:shadow-2xl transition-all duration-300 group-hover:translate-y-[-4px]"
+                        style={{ 
+                          backgroundColor: brand.color,
+                          boxShadow: `0 8px 30px ${brand.color}70`
+                        }}
+                      >
+                        <span className="font-bold text-white text-base tracking-wide">Explore Products</span>
+                        <ArrowRight size={20} className="text-white group-hover:translate-x-2 transition-transform" />
+                      </div>
                     </div>
                   </div>
                 </div>
