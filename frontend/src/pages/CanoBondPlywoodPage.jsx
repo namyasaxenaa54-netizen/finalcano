@@ -88,7 +88,7 @@ const CanoBondPlywoodPage = () => {
                 <img 
                   src="https://customer-assets-lqy194kg.emergentagent.net/job_crystal-brands-1/artifacts/r07zu3oz_WhatsApp%20Image%202026-09-20%20at%2017.02.02.jpeg"
                   alt="CanoBond Premium Quality Plywood"
-                  className="h-48 w-auto object-contain"
+                  className="h-64 w-auto object-contain max-w-full"
                   style={{ imageRendering: 'crisp-edges' }}
                 />
               </div>
