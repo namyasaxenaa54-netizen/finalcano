@@ -26,6 +26,16 @@ const BrandsEcosystem = () => {
       accentColor: '#2C5F2D',
       logo: '/qurotuff-logo.png',
       image: 'https://images.unsplash.com/photo-1626958390085-c9e945a7f0c4?crop=entropy&cs=srgb&fm=jpg&q=85'
+    },
+    {
+      name: 'CanoBond Plywood',
+      tagline: 'Premium Quality Plywood',
+      description: 'Advanced plywood solutions with Virokill technology, lifetime warranty, and superior craftsmanship across Gold, Platinum, Silver, and Diamond Club ranges',
+      color: '#1E5A8E',
+      gradient: 'from-[#EBF4FB] via-white to-[#EBF4FB]',
+      accentColor: '#1E5A8E',
+      logo: 'https://customer-assets-lqy194kg.emergentagent.net/job_crystal-brands-1/artifacts/r07zu3oz_WhatsApp%20Image%202026-09-20%20at%2017.02.02.jpeg',
+      image: 'https://customer-assets-lqy194kg.emergentagent.net/job_crystal-brands-1/artifacts/pwy3avlr_4e353fb7-6476-4e95-a730-17bb3a5e37d8.png'
     }
   ];
 
@@ -47,16 +57,16 @@ const BrandsEcosystem = () => {
         <div className="mb-20 sm:mb-28">
           <h2 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-gray-900 mb-8 tracking-tighter leading-none">
             ONE CRYSTAL.<br />
-            <span style={{ color: '#E07B39' }}>THREE POWERFUL</span><br />
+            <span style={{ color: '#E07B39' }}>FOUR POWERFUL</span><br />
             <span style={{ color: '#8E44AD' }}>BRANDS.</span>
           </h2>
           <p className="text-xl sm:text-2xl text-gray-600 max-w-3xl font-light leading-relaxed">
-            United by innovation, specialized for excellence across construction, adhesives, and premium plywood
+            United by innovation, specialized for excellence across construction chemicals, adhesives, and premium plywood solutions
           </p>
         </div>
 
         {/* Brand Cards - Sharper, More Spacing */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
           {brands.map((brand, index) => (
             <div
               key={brand.name}
