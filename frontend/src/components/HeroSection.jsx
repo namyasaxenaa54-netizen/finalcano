@@ -118,7 +118,7 @@ const LightThemeHero = () => {
               style={{ animationDelay: `${0.6 + index * 0.2}s` }}
             >
               {/* Card Container - Premium Design */}
-              <div className="relative h-[580px] rounded-3xl overflow-hidden bg-white shadow-2xl hover:shadow-3xl transition-all duration-500 hover:-translate-y-6 border-2 border-gray-100">
+              <div className="relative h-[620px] rounded-3xl overflow-hidden bg-white shadow-2xl hover:shadow-3xl transition-all duration-500 hover:-translate-y-6 border-2 border-gray-100">
                 {/* Background Image with Better Overlay */}
                 <div className="absolute inset-0">
                   <img 
@@ -138,7 +138,7 @@ const LightThemeHero = () => {
                   <div className="flex flex-col items-center text-center">
                     {brand.logo ? (
                       <div 
-                        className={`w-44 h-44 rounded-3xl overflow-hidden shadow-2xl mb-6 bg-white group-hover:scale-105 transition-transform duration-500 ${
+                        className={`w-40 h-40 rounded-3xl overflow-hidden shadow-2xl mb-5 bg-white group-hover:scale-105 transition-transform duration-500 ${
                           brand.id === 'canobond' ? '' : 'p-4 flex items-center justify-center'
                         }`}
                         style={{ 
@@ -156,7 +156,7 @@ const LightThemeHero = () => {
                       </div>
                     ) : (
                       <div 
-                        className="w-44 h-44 rounded-3xl flex items-center justify-center text-7xl shadow-2xl mb-6 bg-white group-hover:scale-105 transition-transform duration-500"
+                        className="w-40 h-40 rounded-3xl flex items-center justify-center text-7xl shadow-2xl mb-5 bg-white group-hover:scale-105 transition-transform duration-500"
                         style={{ 
                           border: `4px solid ${brand.color}`,
                           boxShadow: `0 15px 50px ${brand.color}50`
@@ -168,7 +168,7 @@ const LightThemeHero = () => {
                     
                     {/* Brand Tag */}
                     <div 
-                      className="px-6 py-2.5 rounded-full shadow-lg mb-4"
+                      className="px-5 py-2 rounded-full shadow-lg mb-3"
                       style={{ 
                         backgroundColor: `${brand.color}20`, 
                         border: `2px solid ${brand.color}40` 
@@ -183,25 +183,25 @@ const LightThemeHero = () => {
                   {/* Bottom: Brand Info */}
                   <div className="text-center">
                     <h2 
-                      className="text-5xl md:text-6xl font-bold mb-4 drop-shadow-sm"
+                      className="text-4xl md:text-5xl font-bold mb-3 drop-shadow-sm leading-tight"
                       style={{ color: brand.color }}
                     >
                       {brand.name}
                     </h2>
-                    <p className="text-gray-700 text-xl font-semibold mb-8">
+                    <p className="text-gray-700 text-lg font-semibold mb-6">
                       {brand.subtitle}
                     </p>
 
                     {/* CTA Button */}
                     <div 
-                      className="inline-flex items-center space-x-3 px-10 py-5 rounded-full shadow-xl group-hover:shadow-2xl transition-all duration-300 group-hover:translate-y-[-4px]"
+                      className="inline-flex items-center space-x-3 px-8 py-4 rounded-full shadow-xl group-hover:shadow-2xl transition-all duration-300 group-hover:translate-y-[-4px]"
                       style={{ 
                         backgroundColor: brand.color,
                         boxShadow: `0 8px 30px ${brand.color}70`
                       }}
                     >
-                      <span className="font-bold text-white text-lg tracking-wide">Explore Products</span>
-                      <ArrowRight size={24} className="text-white group-hover:translate-x-2 transition-transform" />
+                      <span className="font-bold text-white text-base tracking-wide">Explore Products</span>
+                      <ArrowRight size={20} className="text-white group-hover:translate-x-2 transition-transform" />
                     </div>
                   </div>
                 </div>
